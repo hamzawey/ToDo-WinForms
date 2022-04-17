@@ -104,7 +104,7 @@
             this.Controls.Add(this.lblRegisterName);
             this.Controls.Add(this.lblRegisterText);
             this.Name = "RegisterView";
-            this.Text = "RegisterView";
+            this.Text = "ToDo App";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -37,7 +37,7 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(1384, 761);
             this.Name = "UserRoleAppView";
-            this.Text = "UserRoleAppView";
+            this.Text = "ToDo App";
             this.ResumeLayout(false);
 
         }

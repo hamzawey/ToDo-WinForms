@@ -104,7 +104,7 @@
             this.Controls.Add(this.lblSignInName);
             this.Controls.Add(this.lblSignInText);
             this.Name = "LoginView";
-            this.Text = "LoginView";
+            this.Text = "ToDo App";
             this.ResumeLayout(false);
             this.PerformLayout();
 

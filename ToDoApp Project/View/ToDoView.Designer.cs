@@ -95,7 +95,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnSignIn);
             this.Name = "ToDoView";
-            this.Text = "ToDo";
+            this.Text = "ToDo App";
             this.Load += new System.EventHandler(this.ToDoView_Load);
             this.ResumeLayout(false);
 
