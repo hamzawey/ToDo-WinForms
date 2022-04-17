@@ -43,7 +43,7 @@
             this.btnRegisterRegisterView.Name = "btnRegisterRegisterView";
             this.btnRegisterRegisterView.Size = new System.Drawing.Size(130, 47);
             this.btnRegisterRegisterView.TabIndex = 11;
-            this.btnRegisterRegisterView.Text = "SIGN IN";
+            this.btnRegisterRegisterView.Text = "REGISTER";
             this.btnRegisterRegisterView.UseVisualStyleBackColor = true;
             this.btnRegisterRegisterView.Click += new System.EventHandler(this.btnRegisterRegisterView_Click);
             // 
