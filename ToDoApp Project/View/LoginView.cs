@@ -28,10 +28,9 @@ namespace ToDoApp_Project.View
             user.Username = username;
             user.Password = password;
 
-            if (userController.doesExist(user))
+            if (userController.doesUsernameExist(user))
             {
                 string foundRole = userController.findRole(user);
-                userController.currentLoggedUserSet(user);
 
                 if(foundRole == "Admin")
                 {

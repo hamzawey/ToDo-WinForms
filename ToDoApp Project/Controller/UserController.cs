@@ -20,11 +20,11 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        public bool doesExist(User user)
+        public bool doesUsernameExist(User user)
         {
             using (UsersDbEntities userEntities = new UsersDbEntities())
             {
-                var users = userEntities.Users.ToList();
+                List<User> users = userEntities.Users.ToList();
                 foreach (var userExist in users)
                 {
                     if (userExist.Username == user.Username)
@@ -33,6 +33,19 @@ namespace ToDoApp_Project.Controller
                     }
                 }
                 return false;
+            }
+        }
+
+        public void DeleteUser(int id)
+        {
+            using (UsersDbEntities userEntities = new UsersDbEntities())
+            {
+                var userDel = userEntities.Users.Where(u => u.Id == id).FirstOrDefault();
+                if (userDel.Id == id)
+                {
+                    userEntities.Users.Remove(userDel);
+                    userEntities.SaveChanges();
+                }
             }
         }
 
@@ -54,25 +67,34 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        // temp code
-        int currentLoggedUserId = 0;
-        string currentLoggedUserUserName = "";
-        string currentLoggedUserRole = "";
-        string currentLoggedUserPassword = "";
-        public void currentLoggedUserSet(User user)
+        public bool doesIdExist(User user)
         {
             using (UsersDbEntities userEntities = new UsersDbEntities())
             {
-                var users = userEntities.Users.ToList();
+                List<User> users = userEntities.Users.ToList();
                 foreach (var userExist in users)
                 {
-                    if (userExist.Username == user.Username)
+                    if (userExist.Id == user.Id)
                     {
-                        currentLoggedUserId = userExist.Id;
-                        currentLoggedUserUserName = userExist.Username;
-                        currentLoggedUserRole = userExist.Role;
-                        currentLoggedUserPassword = userExist.Password;
+                        return true;
                     }
+                }
+                return false;
+            }
+        }
+
+        public void EditUser(int id, User user)
+        {
+            using (UsersDbEntities userEntities = new UsersDbEntities())
+            {
+                var userUpdate = userEntities.Users.Where(u => u.Id == id).FirstOrDefault();
+                if (userUpdate != null)
+                {
+                    userUpdate.Id = id;
+                    userUpdate.Username = user.Username;
+                    userUpdate.Password = user.Password;
+                    userUpdate.Role = user.Role;
+                    userEntities.SaveChanges();
                 }
             }
         }

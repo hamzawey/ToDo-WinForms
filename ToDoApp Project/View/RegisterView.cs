@@ -41,7 +41,7 @@ namespace ToDoApp_Project.View
                     user.Username = username;
                     user.Password = password;
                     user.Role = userrole;
-                    if (userController.doesExist(user))
+                    if (userController.doesUsernameExist(user))
                     {
                         MessageBox.Show("Username already exists!", "Username is being used",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -58,7 +58,7 @@ namespace ToDoApp_Project.View
             }
             else
             {
-                MessageBox.Show("Please dont leave the text boxes empty!", "Invalid email or password",
+                MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

@@ -16,5 +16,12 @@ namespace ToDoApp_Project.View
         {
             InitializeComponent();
         }
+
+        private void btnUsersManagementView_Click(object sender, EventArgs e)
+        {
+            Hide();
+            UsersManagementView umv = new UsersManagementView();
+            umv.Show();
+        }
     }
 }
