@@ -83,6 +83,26 @@ namespace ToDoApp_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _601078 {
+            get {
+                object obj = ResourceManager.GetObject("601078", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ocean_Wallpaper_scaled {
+            get {
+                object obj = ResourceManager.GetObject("Ocean-Wallpaper-scaled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p894hf7go2b51 {
             get {
                 object obj = ResourceManager.GetObject("p894hf7go2b51", resourceCulture);
