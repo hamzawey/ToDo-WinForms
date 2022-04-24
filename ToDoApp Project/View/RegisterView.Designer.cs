@@ -38,34 +38,37 @@
             // 
             // btnRegisterRegisterView
             // 
+            this.btnRegisterRegisterView.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnRegisterRegisterView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterRegisterView.ForeColor = System.Drawing.Color.White;
             this.btnRegisterRegisterView.Location = new System.Drawing.Point(229, 241);
             this.btnRegisterRegisterView.Name = "btnRegisterRegisterView";
             this.btnRegisterRegisterView.Size = new System.Drawing.Size(130, 47);
             this.btnRegisterRegisterView.TabIndex = 11;
             this.btnRegisterRegisterView.Text = "REGISTER";
-            this.btnRegisterRegisterView.UseVisualStyleBackColor = true;
+            this.btnRegisterRegisterView.UseVisualStyleBackColor = false;
             this.btnRegisterRegisterView.Click += new System.EventHandler(this.btnRegisterRegisterView_Click);
             // 
             // txtBoxRegisterName
             // 
-            this.txtBoxRegisterName.Location = new System.Drawing.Point(59, 170);
+            this.txtBoxRegisterName.Location = new System.Drawing.Point(59, 158);
             this.txtBoxRegisterName.Name = "txtBoxRegisterName";
             this.txtBoxRegisterName.Size = new System.Drawing.Size(150, 20);
             this.txtBoxRegisterName.TabIndex = 10;
             // 
             // txtBoxRegisterPassword
             // 
-            this.txtBoxRegisterPassword.Location = new System.Drawing.Point(378, 170);
+            this.txtBoxRegisterPassword.Location = new System.Drawing.Point(378, 158);
             this.txtBoxRegisterPassword.Name = "txtBoxRegisterPassword";
             this.txtBoxRegisterPassword.Size = new System.Drawing.Size(150, 20);
             this.txtBoxRegisterPassword.TabIndex = 9;
             // 
             // lblRegisterPassword
             // 
+            this.lblRegisterPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblRegisterPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterPassword.ForeColor = System.Drawing.Color.White;
-            this.lblRegisterPassword.Location = new System.Drawing.Point(386, 124);
+            this.lblRegisterPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblRegisterPassword.Location = new System.Drawing.Point(386, 112);
             this.lblRegisterPassword.Name = "lblRegisterPassword";
             this.lblRegisterPassword.Size = new System.Drawing.Size(129, 23);
             this.lblRegisterPassword.TabIndex = 8;
@@ -73,9 +76,10 @@
             // 
             // lblRegisterName
             // 
+            this.lblRegisterName.BackColor = System.Drawing.Color.Transparent;
             this.lblRegisterName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterName.ForeColor = System.Drawing.Color.White;
-            this.lblRegisterName.Location = new System.Drawing.Point(96, 124);
+            this.lblRegisterName.ForeColor = System.Drawing.Color.Black;
+            this.lblRegisterName.Location = new System.Drawing.Point(96, 112);
             this.lblRegisterName.Name = "lblRegisterName";
             this.lblRegisterName.Size = new System.Drawing.Size(75, 23);
             this.lblRegisterName.TabIndex = 7;
@@ -83,8 +87,9 @@
             // 
             // lblRegisterText
             // 
+            this.lblRegisterText.BackColor = System.Drawing.Color.Transparent;
             this.lblRegisterText.Font = new System.Drawing.Font("Segoe MDL2 Assets", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterText.ForeColor = System.Drawing.Color.White;
+            this.lblRegisterText.ForeColor = System.Drawing.Color.Black;
             this.lblRegisterText.Location = new System.Drawing.Point(187, 23);
             this.lblRegisterText.Name = "lblRegisterText";
             this.lblRegisterText.Size = new System.Drawing.Size(222, 69);
@@ -95,7 +100,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources._360_F_300808649_zCM3DACzRfbgSaZ2RsyDLZqIsf6Nh3hW;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.btnRegisterRegisterView);
             this.Controls.Add(this.txtBoxRegisterName);

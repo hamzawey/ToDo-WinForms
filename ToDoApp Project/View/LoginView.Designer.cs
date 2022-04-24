@@ -38,8 +38,9 @@
             // 
             // lblSignInText
             // 
+            this.lblSignInText.BackColor = System.Drawing.Color.Transparent;
             this.lblSignInText.Font = new System.Drawing.Font("Segoe MDL2 Assets", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignInText.ForeColor = System.Drawing.Color.White;
+            this.lblSignInText.ForeColor = System.Drawing.Color.Black;
             this.lblSignInText.Location = new System.Drawing.Point(219, 19);
             this.lblSignInText.Name = "lblSignInText";
             this.lblSignInText.Size = new System.Drawing.Size(168, 69);
@@ -48,9 +49,10 @@
             // 
             // lblSignInName
             // 
+            this.lblSignInName.BackColor = System.Drawing.Color.Transparent;
             this.lblSignInName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignInName.ForeColor = System.Drawing.Color.White;
-            this.lblSignInName.Location = new System.Drawing.Point(105, 117);
+            this.lblSignInName.ForeColor = System.Drawing.Color.Black;
+            this.lblSignInName.Location = new System.Drawing.Point(104, 110);
             this.lblSignInName.Name = "lblSignInName";
             this.lblSignInName.Size = new System.Drawing.Size(75, 23);
             this.lblSignInName.TabIndex = 1;
@@ -58,9 +60,10 @@
             // 
             // lblSignInPassword
             // 
+            this.lblSignInPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblSignInPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignInPassword.ForeColor = System.Drawing.Color.White;
-            this.lblSignInPassword.Location = new System.Drawing.Point(395, 117);
+            this.lblSignInPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblSignInPassword.Location = new System.Drawing.Point(394, 110);
             this.lblSignInPassword.Name = "lblSignInPassword";
             this.lblSignInPassword.Size = new System.Drawing.Size(129, 23);
             this.lblSignInPassword.TabIndex = 2;
@@ -68,34 +71,38 @@
             // 
             // txtBoxSignInPassword
             // 
-            this.txtBoxSignInPassword.Location = new System.Drawing.Point(387, 163);
+            this.txtBoxSignInPassword.Location = new System.Drawing.Point(386, 156);
             this.txtBoxSignInPassword.Name = "txtBoxSignInPassword";
             this.txtBoxSignInPassword.Size = new System.Drawing.Size(150, 20);
             this.txtBoxSignInPassword.TabIndex = 3;
             // 
             // txtBoxSignInName
             // 
-            this.txtBoxSignInName.Location = new System.Drawing.Point(68, 163);
+            this.txtBoxSignInName.Location = new System.Drawing.Point(67, 156);
             this.txtBoxSignInName.Name = "txtBoxSignInName";
             this.txtBoxSignInName.Size = new System.Drawing.Size(150, 20);
             this.txtBoxSignInName.TabIndex = 4;
             // 
             // btnSignInLoginView
             // 
+            this.btnSignInLoginView.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSignInLoginView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignInLoginView.ForeColor = System.Drawing.Color.White;
             this.btnSignInLoginView.Location = new System.Drawing.Point(238, 234);
             this.btnSignInLoginView.Name = "btnSignInLoginView";
             this.btnSignInLoginView.Size = new System.Drawing.Size(130, 47);
             this.btnSignInLoginView.TabIndex = 5;
             this.btnSignInLoginView.Text = "SIGN IN";
-            this.btnSignInLoginView.UseVisualStyleBackColor = true;
+            this.btnSignInLoginView.UseVisualStyleBackColor = false;
             this.btnSignInLoginView.Click += new System.EventHandler(this.btnSignInLoginView_Click);
             // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources._360_F_300808649_zCM3DACzRfbgSaZ2RsyDLZqIsf6Nh3hW;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.btnSignInLoginView);
             this.Controls.Add(this.txtBoxSignInName);

@@ -28,29 +28,38 @@ namespace ToDoApp_Project.View
             user.Username = username;
             user.Password = password;
 
-            if (userController.doesUsernameExist(user))
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password) &&
+                !string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
             {
-                string foundRole = userController.findRole(user);
+                if (userController.tryToLogin(user))
+                {
+                    string foundRole = userController.findRole(user);
 
-                if(foundRole == "Admin")
-                {
-                    Hide();
-                    AdminRoleAppView adminView = new AdminRoleAppView();
-                    adminView.Show();
+                    if (foundRole == "Admin")
+                    {
+                        Hide();
+                        AdminRoleAppView adminView = new AdminRoleAppView();
+                        adminView.Show();
+                    }
+                    else if (foundRole == "User")
+                    {
+                        Hide();
+                        UserRoleAppView userView = new UserRoleAppView();
+                        userView.Show();
+                    }
                 }
-                else if(foundRole == "User")
+                else
                 {
-                    Hide();
-                    UserRoleAppView userView = new UserRoleAppView();
-                    userView.Show();
+                    MessageBox.Show("Error logging in!", "Invalid data",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtBoxSignInName.Text = "";
+                    txtBoxSignInPassword.Text = "";
                 }
             }
             else
             {
-                MessageBox.Show("Username doesnt exist!", "Invalid username",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtBoxSignInName.Text = "";
-                txtBoxSignInPassword.Text = "";
+                MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
