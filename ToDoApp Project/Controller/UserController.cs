@@ -12,7 +12,7 @@ namespace ToDoApp_Project.Controller
     {
         public void RegisterUser(User user)
         {
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 user.Id = userEntities.Users.ToList().LastOrDefault().Id + 1;
                 userEntities.Users.Add(user);
@@ -22,7 +22,7 @@ namespace ToDoApp_Project.Controller
 
         public bool tryToLogin(User user)
         {
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 List<User> users = userEntities.Users.ToList();
                 foreach (var userExist in users)
@@ -41,7 +41,7 @@ namespace ToDoApp_Project.Controller
 
         public bool doesUsernameExist(User user)
         {
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 List<User> users = userEntities.Users.ToList();
                 foreach (var userExist in users)
@@ -57,7 +57,7 @@ namespace ToDoApp_Project.Controller
 
         public void DeleteUser(int id)
         {
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 var userDel = userEntities.Users.Where(u => u.Id == id).FirstOrDefault();
                 if (userDel.Id == id)
@@ -71,7 +71,7 @@ namespace ToDoApp_Project.Controller
         public string findRole(User user)
         {
             string foundRole = "";
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 var users = userEntities.Users.ToList();
                 foreach (var userExist in users)
@@ -88,7 +88,7 @@ namespace ToDoApp_Project.Controller
 
         public bool doesIdExist(User user)
         {
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 List<User> users = userEntities.Users.ToList();
                 foreach (var userExist in users)
@@ -104,7 +104,7 @@ namespace ToDoApp_Project.Controller
 
         public void EditUser(int id, User user)
         {
-            using (UsersDbEntities userEntities = new UsersDbEntities())
+            using (UserDbEntities userEntities = new UserDbEntities())
             {
                 var userUpdate = userEntities.Users.Where(u => u.Id == id).FirstOrDefault();
                 if (userUpdate != null)
