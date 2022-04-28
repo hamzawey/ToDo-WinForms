@@ -34,6 +34,7 @@
             this.lblRegisterPassword = new System.Windows.Forms.Label();
             this.lblRegisterName = new System.Windows.Forms.Label();
             this.lblRegisterText = new System.Windows.Forms.Label();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegisterRegisterView
@@ -96,6 +97,19 @@
             this.lblRegisterText.TabIndex = 6;
             this.lblRegisterText.Text = "REGISTER";
             // 
+            // btnGoBack
+            // 
+            this.btnGoBack.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.ForeColor = System.Drawing.Color.White;
+            this.btnGoBack.Location = new System.Drawing.Point(459, 312);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(113, 37);
+            this.btnGoBack.TabIndex = 12;
+            this.btnGoBack.Text = "GO BACK";
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
             // RegisterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +118,7 @@
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources._360_F_300808649_zCM3DACzRfbgSaZ2RsyDLZqIsf6Nh3hW;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnRegisterRegisterView);
             this.Controls.Add(this.txtBoxRegisterName);
             this.Controls.Add(this.txtBoxRegisterPassword);
@@ -125,5 +140,6 @@
         private System.Windows.Forms.Label lblRegisterPassword;
         private System.Windows.Forms.Label lblRegisterName;
         private System.Windows.Forms.Label lblRegisterText;
+        private System.Windows.Forms.Button btnGoBack;
     }
 }

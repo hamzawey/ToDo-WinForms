@@ -34,6 +34,7 @@
             this.txtBoxSignInPassword = new System.Windows.Forms.TextBox();
             this.txtBoxSignInName = new System.Windows.Forms.TextBox();
             this.btnSignInLoginView = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSignInText
@@ -96,6 +97,19 @@
             this.btnSignInLoginView.UseVisualStyleBackColor = false;
             this.btnSignInLoginView.Click += new System.EventHandler(this.btnSignInLoginView_Click);
             // 
+            // btnGoBack
+            // 
+            this.btnGoBack.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.ForeColor = System.Drawing.Color.White;
+            this.btnGoBack.Location = new System.Drawing.Point(458, 316);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(114, 33);
+            this.btnGoBack.TabIndex = 6;
+            this.btnGoBack.Text = "GO BACK";
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,6 +118,7 @@
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources._360_F_300808649_zCM3DACzRfbgSaZ2RsyDLZqIsf6Nh3hW;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnSignInLoginView);
             this.Controls.Add(this.txtBoxSignInName);
             this.Controls.Add(this.txtBoxSignInPassword);
@@ -125,5 +140,6 @@
         private System.Windows.Forms.TextBox txtBoxSignInPassword;
         private System.Windows.Forms.TextBox txtBoxSignInName;
         private System.Windows.Forms.Button btnSignInLoginView;
+        private System.Windows.Forms.Button btnGoBack;
     }
 }

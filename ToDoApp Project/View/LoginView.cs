@@ -62,5 +62,12 @@ namespace ToDoApp_Project.View
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnGoBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            ToDoView view = new ToDoView();
+            view.Show();
+        }
     }
 }
