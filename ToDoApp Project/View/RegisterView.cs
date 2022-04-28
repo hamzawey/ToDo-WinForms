@@ -27,34 +27,26 @@ namespace ToDoApp_Project.View
             string password = txtBoxRegisterPassword.Text;
             string userrole = "User";
 
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password) &&
+                !string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
             {
-                if (username == "Admin" || username == "admin")
+                user.Username = username;
+                user.Password = password;
+                user.Role = userrole;
+                if (userController.doesUsernameExist(user))
                 {
-                    MessageBox.Show("Please enter a non-admin username!", "Username error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Username already exists!", "Username is being used",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtBoxRegisterName.Text = "";
                     txtBoxRegisterPassword.Text = "";
                 }
                 else
                 {
-                    user.Username = username;
-                    user.Password = password;
-                    user.Role = userrole;
-                    if (userController.doesUsernameExist(user))
-                    {
-                        MessageBox.Show("Username already exists!", "Username is being used",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtBoxRegisterName.Text = "";
-                    }
-                    else
-                    {
-                        userController.RegisterUser(user);
-                        Hide();
-                        LoginView login = new LoginView();
-                        login.Show();
-                    }
-                } 
+                    userController.RegisterUser(user);
+                    Hide();
+                    UserRoleAppView userView = new UserRoleAppView();
+                    userView.Show();
+                }
             }
             else
             {

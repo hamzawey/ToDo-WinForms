@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvUserManagementView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.applicationDbModelDataSet = new ToDoApp_Project.ApplicationDbModelDataSet();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.applicationDbModelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEdit = new System.Windows.Forms.Button();
@@ -54,22 +60,16 @@
             this.txtEditRole = new System.Windows.Forms.TextBox();
             this.txtEditName = new System.Windows.Forms.TextBox();
             this.txtEditPass = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.applicationDbModelDataSet = new ToDoApp_Project.ApplicationDbModelDataSet();
             this.userTableAdapter = new ToDoApp_Project.ApplicationDbModelDataSetTableAdapters.UserTableAdapter();
             this.lblDeleteById = new System.Windows.Forms.Label();
             this.txtBoxDeleteById = new System.Windows.Forms.TextBox();
             this.lblDelByID = new System.Windows.Forms.Label();
             this.btnDeleteById = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagementView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUserManagementView
@@ -87,10 +87,48 @@
             this.dgvUserManagementView.Size = new System.Drawing.Size(508, 529);
             this.dgvUserManagementView.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Username";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Role";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Role";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // userBindingSource1
+            // 
+            this.userBindingSource1.DataMember = "User";
+            this.userBindingSource1.DataSource = this.applicationDbModelDataSet;
+            // 
+            // applicationDbModelDataSet
+            // 
+            this.applicationDbModelDataSet.DataSetName = "ApplicationDbModelDataSet";
+            this.applicationDbModelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(702, 415);
+            this.btnEdit.Location = new System.Drawing.Point(701, 459);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 37);
             this.btnEdit.TabIndex = 1;
@@ -150,18 +188,20 @@
             // 
             // lblDeleteManagement
             // 
-            this.lblDeleteManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeleteManagement.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeleteManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteManagement.ForeColor = System.Drawing.Color.White;
-            this.lblDeleteManagement.Location = new System.Drawing.Point(527, 188);
+            this.lblDeleteManagement.Location = new System.Drawing.Point(527, 183);
             this.lblDeleteManagement.Name = "lblDeleteManagement";
-            this.lblDeleteManagement.Size = new System.Drawing.Size(453, 30);
+            this.lblDeleteManagement.Size = new System.Drawing.Size(547, 42);
             this.lblDeleteManagement.TabIndex = 8;
             this.lblDeleteManagement.Text = "Select user from the grid and click delete to delete the account";
             this.lblDeleteManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCreateManagement
             // 
-            this.lblCreateManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateManagement.BackColor = System.Drawing.Color.Transparent;
+            this.lblCreateManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateManagement.ForeColor = System.Drawing.Color.White;
             this.lblCreateManagement.Location = new System.Drawing.Point(523, 12);
             this.lblCreateManagement.Name = "lblCreateManagement";
@@ -172,19 +212,20 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(527, 389);
+            this.label1.Location = new System.Drawing.Point(545, 405);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(453, 23);
+            this.label1.Size = new System.Drawing.Size(529, 51);
             this.label1.TabIndex = 10;
-            this.label1.Text = "To edit account select it from the grid";
+            this.label1.Text = "TO EDIT ACCOUNT SELECT IT FROM THE GRID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnGoBack
             // 
             this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.Location = new System.Drawing.Point(873, 540);
+            this.btnGoBack.Location = new System.Drawing.Point(975, 543);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(99, 37);
             this.btnGoBack.TabIndex = 11;
@@ -194,6 +235,7 @@
             // 
             // lblUsersManagementBig
             // 
+            this.lblUsersManagementBig.BackColor = System.Drawing.Color.Transparent;
             this.lblUsersManagementBig.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsersManagementBig.ForeColor = System.Drawing.Color.White;
             this.lblUsersManagementBig.Location = new System.Drawing.Point(158, 12);
@@ -204,132 +246,101 @@
             // 
             // lblIdManageCreate
             // 
-            this.lblIdManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdManageCreate.BackColor = System.Drawing.Color.Transparent;
+            this.lblIdManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdManageCreate.ForeColor = System.Drawing.Color.White;
             this.lblIdManageCreate.Location = new System.Drawing.Point(528, 90);
             this.lblIdManageCreate.Name = "lblIdManageCreate";
             this.lblIdManageCreate.Size = new System.Drawing.Size(73, 23);
             this.lblIdManageCreate.TabIndex = 13;
-            this.lblIdManageCreate.Text = "id";
+            this.lblIdManageCreate.Text = "ID";
             // 
             // lblUsernameManageCreate
             // 
-            this.lblUsernameManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameManageCreate.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsernameManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsernameManageCreate.ForeColor = System.Drawing.Color.White;
             this.lblUsernameManageCreate.Location = new System.Drawing.Point(607, 90);
             this.lblUsernameManageCreate.Name = "lblUsernameManageCreate";
             this.lblUsernameManageCreate.Size = new System.Drawing.Size(137, 23);
             this.lblUsernameManageCreate.TabIndex = 14;
-            this.lblUsernameManageCreate.Text = "username";
+            this.lblUsernameManageCreate.Text = "USERNAME";
             // 
             // lblPasswordManageCreate
             // 
-            this.lblPasswordManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordManageCreate.BackColor = System.Drawing.Color.Transparent;
+            this.lblPasswordManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasswordManageCreate.ForeColor = System.Drawing.Color.White;
             this.lblPasswordManageCreate.Location = new System.Drawing.Point(750, 90);
             this.lblPasswordManageCreate.Name = "lblPasswordManageCreate";
             this.lblPasswordManageCreate.Size = new System.Drawing.Size(143, 23);
             this.lblPasswordManageCreate.TabIndex = 15;
-            this.lblPasswordManageCreate.Text = "password";
+            this.lblPasswordManageCreate.Text = "PASSWORD";
             // 
             // lblRoleManageCreate
             // 
-            this.lblRoleManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoleManageCreate.BackColor = System.Drawing.Color.Transparent;
+            this.lblRoleManageCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoleManageCreate.ForeColor = System.Drawing.Color.White;
             this.lblRoleManageCreate.Location = new System.Drawing.Point(899, 90);
             this.lblRoleManageCreate.Name = "lblRoleManageCreate";
             this.lblRoleManageCreate.Size = new System.Drawing.Size(80, 23);
             this.lblRoleManageCreate.TabIndex = 16;
-            this.lblRoleManageCreate.Text = "role";
+            this.lblRoleManageCreate.Text = "ROLE";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(861, 502);
+            this.label2.Location = new System.Drawing.Point(862, 558);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 24;
-            this.label2.Text = "role";
+            this.label2.Text = "ROLE";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(712, 502);
+            this.label3.Location = new System.Drawing.Point(713, 558);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 23);
             this.label3.TabIndex = 23;
-            this.label3.Text = "password";
+            this.label3.Text = "PASSWORD";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(569, 502);
+            this.label4.Location = new System.Drawing.Point(570, 558);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 23);
             this.label4.TabIndex = 22;
-            this.label4.Text = "username";
+            this.label4.Text = "USERNAME";
             // 
             // txtEditRole
             // 
-            this.txtEditRole.Location = new System.Drawing.Point(861, 469);
+            this.txtEditRole.Location = new System.Drawing.Point(862, 525);
             this.txtEditRole.Name = "txtEditRole";
             this.txtEditRole.Size = new System.Drawing.Size(80, 20);
             this.txtEditRole.TabIndex = 20;
             // 
             // txtEditName
             // 
-            this.txtEditName.Location = new System.Drawing.Point(569, 469);
+            this.txtEditName.Location = new System.Drawing.Point(570, 525);
             this.txtEditName.Name = "txtEditName";
             this.txtEditName.Size = new System.Drawing.Size(140, 20);
             this.txtEditName.TabIndex = 19;
             // 
             // txtEditPass
             // 
-            this.txtEditPass.Location = new System.Drawing.Point(715, 469);
+            this.txtEditPass.Location = new System.Drawing.Point(716, 525);
             this.txtEditPass.Name = "txtEditPass";
             this.txtEditPass.Size = new System.Drawing.Size(140, 20);
             this.txtEditPass.TabIndex = 18;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Role";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 80;
-            // 
-            // userBindingSource1
-            // 
-            this.userBindingSource1.DataMember = "User";
-            this.userBindingSource1.DataSource = this.applicationDbModelDataSet;
-            // 
-            // applicationDbModelDataSet
-            // 
-            this.applicationDbModelDataSet.DataSetName = "ApplicationDbModelDataSet";
-            this.applicationDbModelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // userTableAdapter
             // 
@@ -337,13 +348,14 @@
             // 
             // lblDeleteById
             // 
-            this.lblDeleteById.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeleteById.BackColor = System.Drawing.Color.Transparent;
+            this.lblDeleteById.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteById.ForeColor = System.Drawing.Color.White;
             this.lblDeleteById.Location = new System.Drawing.Point(907, 352);
             this.lblDeleteById.Name = "lblDeleteById";
             this.lblDeleteById.Size = new System.Drawing.Size(46, 23);
             this.lblDeleteById.TabIndex = 26;
-            this.lblDeleteById.Text = "id";
+            this.lblDeleteById.Text = "ID";
             // 
             // txtBoxDeleteById
             // 
@@ -354,13 +366,14 @@
             // 
             // lblDelByID
             // 
-            this.lblDelByID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelByID.BackColor = System.Drawing.Color.Transparent;
+            this.lblDelByID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDelByID.ForeColor = System.Drawing.Color.White;
             this.lblDelByID.Location = new System.Drawing.Point(527, 292);
             this.lblDelByID.Name = "lblDelByID";
             this.lblDelByID.Size = new System.Drawing.Size(453, 30);
             this.lblDelByID.TabIndex = 28;
-            this.lblDelByID.Text = "Delete By Id";
+            this.lblDelByID.Text = "DELETE BY ID";
             this.lblDelByID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDeleteById
@@ -378,8 +391,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(984, 592);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources._017566664036869b3f2d81312085887eac4c;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1086, 592);
             this.Controls.Add(this.lblDelByID);
             this.Controls.Add(this.btnDeleteById);
             this.Controls.Add(this.lblDeleteById);
@@ -411,10 +426,10 @@
             this.Text = "ToDo App";
             this.Load += new System.EventHandler(this.UsersManagementView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagementView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

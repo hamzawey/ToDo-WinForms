@@ -139,6 +139,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\UserRoleAppView.resx">
       <DependentUpon>UserRoleAppView.cs</DependentUpon>
@@ -194,6 +195,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ApplicationDbModel.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Ocean-Wallpaper-scaled.jpg" />
+    <None Include="Resources\601078.jpg" />
+    <None Include="Resources\017566664036869b3f2d81312085887eac4c.jpg" />
+    <None Include="Resources\p894hf7go2b51.jpg" />
+    <None Include="Resources\360_F_300808649_zCM3DACzRfbgSaZ2RsyDLZqIsf6Nh3hW.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

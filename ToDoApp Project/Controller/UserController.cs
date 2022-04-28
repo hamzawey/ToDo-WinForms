@@ -20,6 +20,25 @@ namespace ToDoApp_Project.Controller
             }
         }
 
+        public bool tryToLogin(User user)
+        {
+            using (UsersDbEntities userEntities = new UsersDbEntities())
+            {
+                List<User> users = userEntities.Users.ToList();
+                foreach (var userExist in users)
+                {
+                    if (userExist.Username == user.Username)
+                    {
+                        if (userExist.Password == user.Password)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+
         public bool doesUsernameExist(User user)
         {
             using (UsersDbEntities userEntities = new UsersDbEntities())
