@@ -26,5 +26,6 @@ namespace ToDoApp_Project.Model
         }
     
         public virtual DbSet<ToDo> ToDoes { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

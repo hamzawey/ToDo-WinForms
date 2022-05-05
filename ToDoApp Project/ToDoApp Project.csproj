@@ -95,23 +95,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ToDo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\User.cs">
-      <DependentUpon>User.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\User.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\User1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User.tt</DependentUpon>
+      <DependentUpon>ToDo.tt</DependentUpon>
     </Compile>
     <Compile Include="View\AdminRoleAppView.cs">
       <SubType>Form</SubType>
@@ -197,13 +182,6 @@
     <None Include="Model\ToDo.edmx.diagram">
       <DependentUpon>ToDo.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="Model\User.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>User.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model\User.edmx.diagram">
-      <DependentUpon>User.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -250,16 +228,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ToDo.edmx</DependentUpon>
       <LastGenOutput>ToDo1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\User.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>User.edmx</DependentUpon>
-      <LastGenOutput>User.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\User.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>User.edmx</DependentUpon>
-      <LastGenOutput>User1.cs</LastGenOutput>
     </Content>
     <None Include="Resources\Ocean-Wallpaper-scaled.jpg" />
     <None Include="Resources\601078.jpg" />

@@ -20,5 +20,7 @@ namespace ToDoApp_Project.Model
         public int CreatorId { get; set; }
         public System.DateTime LastChanged { get; set; }
         public int LastChangedUserId { get; set; }
+    
+        public virtual User User { get; set; }
     }
 }
