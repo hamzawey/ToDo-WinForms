@@ -10,6 +10,7 @@ namespace ToDoApp_Project.Controller
 {
     public class UserController
     {
+        // USER CONTROLLER
         public void RegisterUser(User user)
         {
             using (ToDoDbEntities userEntities = new ToDoDbEntities())
