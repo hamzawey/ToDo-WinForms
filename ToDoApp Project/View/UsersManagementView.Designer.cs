@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvUserManagementView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.applicationDbModelDataSet = new ToDoApp_Project.ApplicationDbModelDataSet();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.applicationDbModelDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -60,70 +51,20 @@
             this.txtEditRole = new System.Windows.Forms.TextBox();
             this.txtEditName = new System.Windows.Forms.TextBox();
             this.txtEditPass = new System.Windows.Forms.TextBox();
-            this.userTableAdapter = new ToDoApp_Project.ApplicationDbModelDataSetTableAdapters.UserTableAdapter();
             this.lblDeleteById = new System.Windows.Forms.Label();
             this.txtBoxDeleteById = new System.Windows.Forms.TextBox();
             this.lblDelByID = new System.Windows.Forms.Label();
             this.btnDeleteById = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagementView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUserManagementView
             // 
-            this.dgvUserManagementView.AutoGenerateColumns = false;
             this.dgvUserManagementView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserManagementView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dgvUserManagementView.DataSource = this.userBindingSource1;
             this.dgvUserManagementView.Location = new System.Drawing.Point(12, 48);
             this.dgvUserManagementView.Name = "dgvUserManagementView";
             this.dgvUserManagementView.Size = new System.Drawing.Size(508, 529);
             this.dgvUserManagementView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Role";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 80;
-            // 
-            // userBindingSource1
-            // 
-            this.userBindingSource1.DataMember = "User";
-            this.userBindingSource1.DataSource = this.applicationDbModelDataSet;
-            // 
-            // applicationDbModelDataSet
-            // 
-            this.applicationDbModelDataSet.DataSetName = "ApplicationDbModelDataSet";
-            this.applicationDbModelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnEdit
             // 
@@ -342,10 +283,6 @@
             this.txtEditPass.Size = new System.Drawing.Size(140, 20);
             this.txtEditPass.TabIndex = 18;
             // 
-            // userTableAdapter
-            // 
-            this.userTableAdapter.ClearBeforeFill = true;
-            // 
             // lblDeleteById
             // 
             this.lblDeleteById.BackColor = System.Drawing.Color.Transparent;
@@ -426,10 +363,6 @@
             this.Text = "ToDo App";
             this.Load += new System.EventHandler(this.UsersManagementView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagementView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationDbModelDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,8 +371,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUserManagementView;
-        private System.Windows.Forms.BindingSource applicationDbModelDataSetBindingSource;
-        private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
@@ -447,9 +378,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
-        private ApplicationDbModelDataSet applicationDbModelDataSet;
-        private System.Windows.Forms.BindingSource userBindingSource1;
-        private ApplicationDbModelDataSetTableAdapters.UserTableAdapter userTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

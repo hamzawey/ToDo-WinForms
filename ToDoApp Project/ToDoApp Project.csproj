@@ -70,17 +70,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationDbModelDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ApplicationDbModelDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controller\ToDoController.cs" />
     <Compile Include="Controller\UserController.cs" />
-    <Compile Include="Model\ToDo.cs" />
-    <Compile Include="Model\ToDosDbEntities.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UsersDbEntities.cs" />
+    <Compile Include="Model\DbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ToDo.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminRoleAppView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,16 +159,12 @@
     <EmbeddedResource Include="View\UsersManagementView.resx">
       <DependentUpon>UsersManagementView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ApplicationDbModelDataSet.xsc">
-      <DependentUpon>ApplicationDbModelDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ApplicationDbModelDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ApplicationDbModelDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ApplicationDbModelDataSet.xss">
-      <DependentUpon>ApplicationDbModelDataSet.xsd</DependentUpon>
+    <EntityDeploy Include="Model\DbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DbModel.edmx.diagram">
+      <DependentUpon>DbModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -194,6 +202,16 @@
     <Content Include="ApplicationDbModel_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>ApplicationDbModel.mdf</DependentUpon>
+    </Content>
+    <Content Include="Model\DbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
     <None Include="Resources\Ocean-Wallpaper-scaled.jpg" />
     <None Include="Resources\601078.jpg" />

@@ -76,6 +76,7 @@
             this.txtBoxSignInPassword.Name = "txtBoxSignInPassword";
             this.txtBoxSignInPassword.Size = new System.Drawing.Size(150, 20);
             this.txtBoxSignInPassword.TabIndex = 3;
+            this.txtBoxSignInPassword.UseSystemPasswordChar = true;
             // 
             // txtBoxSignInName
             // 

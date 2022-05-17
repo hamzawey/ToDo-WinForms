@@ -22,7 +22,7 @@ namespace ToDoApp_Project.View
 
         private void UsersManagementView_Load(object sender, EventArgs e)
         {
-            userTableAdapter.Fill(applicationDbModelDataSet.User);
+            // ADD UPDATE
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace ToDoApp_Project.View
             DataGridViewRow row = dgvUserManagementView.CurrentRow;
             int id = int.Parse(row.Cells[0].Value.ToString());
             userController.DeleteUser(id);
-            userTableAdapter.Fill(applicationDbModelDataSet.User);
+            // ADD UPDATE
         }
 
         private void btnGoBack_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace ToDoApp_Project.View
                 else
                 {
                     userController.RegisterUser(user);
-                    userTableAdapter.Fill(applicationDbModelDataSet.User);
+                    // ADD UPDATE
                 }
             }
             else
@@ -115,7 +115,7 @@ namespace ToDoApp_Project.View
                 else
                 {
                     userController.EditUser(id, user);
-                    userTableAdapter.Fill(applicationDbModelDataSet.User);
+                    // ADD UPDATE
                 }
             }
             else
@@ -130,7 +130,7 @@ namespace ToDoApp_Project.View
             int id = int.Parse(txtBoxDeleteById.Text);
             userController.DeleteUser(id);
             txtBoxDeleteById.Text = "";
-            userTableAdapter.Fill(applicationDbModelDataSet.User);
+            // ADD UPDATE
         }
     }
 }
