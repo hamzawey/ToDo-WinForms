@@ -15,6 +15,7 @@ namespace ToDoApp_Project.View
     public partial class UsersManagementView : Form
     {
         UserController userController = new UserController();
+
         public UsersManagementView()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace ToDoApp_Project.View
 
         private void UsersManagementView_Load(object sender, EventArgs e)
         {
-            // ADD UPDATE
+            dgvUserManagementView.DataSource = userController.GetUsers();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

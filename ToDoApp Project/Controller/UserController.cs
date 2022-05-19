@@ -10,6 +10,14 @@ namespace ToDoApp_Project.Controller
 {
     public class UserController
     {
+        public List<User> GetUsers()
+        {
+            using (AppDbModelEntities userEntities = new AppDbModelEntities())
+            {
+                return userEntities.Users.ToList();
+            }
+        }
+
         public void RegisterUser(User user)
         {
             using (AppDbModelEntities userEntities = new AppDbModelEntities())
