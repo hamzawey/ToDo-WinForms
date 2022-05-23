@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvUserManagementView = new System.Windows.Forms.DataGridView();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@
             this.txtBoxDeleteById = new System.Windows.Forms.TextBox();
             this.lblDelByID = new System.Windows.Forms.Label();
             this.btnDeleteById = new System.Windows.Forms.Button();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,7 @@
             this.dgvUserManagementView.AutoGenerateColumns = false;
             this.dgvUserManagementView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUserManagementView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
@@ -77,6 +79,10 @@
             this.dgvUserManagementView.Name = "dgvUserManagementView";
             this.dgvUserManagementView.Size = new System.Drawing.Size(508, 529);
             this.dgvUserManagementView.TabIndex = 0;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(ToDoApp_Project.Model.User);
             // 
             // btnEdit
             // 
@@ -336,9 +342,11 @@
             this.btnDeleteById.UseVisualStyleBackColor = true;
             this.btnDeleteById.Click += new System.EventHandler(this.btnDeleteById_Click);
             // 
-            // userBindingSource
+            // Id
             // 
-            this.userBindingSource.DataSource = typeof(ToDoApp_Project.Model.User);
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -440,9 +448,10 @@
         private System.Windows.Forms.TextBox txtBoxDeleteById;
         private System.Windows.Forms.Label lblDelByID;
         private System.Windows.Forms.Button btnDeleteById;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.BindingSource userBindingSource;
     }
 }
