@@ -16,5 +16,16 @@ namespace ToDoApp_Project.View
         {
             InitializeComponent();
         }
+
+        private void ToDoListsButton_Click(object sender, EventArgs e)
+        {
+            // TODO
+            // this should redirect a user to todolist view.
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

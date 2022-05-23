@@ -28,17 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.ToDoListsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // label1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(938, 737);
-            this.dataGridView1.TabIndex = 0;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label1.Location = new System.Drawing.Point(148, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(345, 59);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "ADMIN HOME";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnExit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.Location = new System.Drawing.Point(252, 322);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(125, 44);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // ToDoListsButton
+            // 
+            this.ToDoListsButton.BackColor = System.Drawing.Color.MediumBlue;
+            this.ToDoListsButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDoListsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ToDoListsButton.Location = new System.Drawing.Point(252, 208);
+            this.ToDoListsButton.Name = "ToDoListsButton";
+            this.ToDoListsButton.Size = new System.Drawing.Size(125, 44);
+            this.ToDoListsButton.TabIndex = 5;
+            this.ToDoListsButton.Text = "ToDo Lists";
+            this.ToDoListsButton.UseVisualStyleBackColor = false;
+            this.ToDoListsButton.Click += new System.EventHandler(this.ToDoListsButton_Click);
             // 
             // UserRoleAppView
             // 
@@ -47,17 +78,20 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.Ocean_Wallpaper_scaled;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1384, 761);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(634, 461);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.ToDoListsButton);
             this.Name = "UserRoleAppView";
             this.Text = "ToDo App";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button ToDoListsButton;
     }
 }
