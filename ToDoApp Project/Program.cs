@@ -13,7 +13,7 @@ namespace ToDoApp_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ToDoView());
+            Application.Run(new MainView());
         }
     }
 }

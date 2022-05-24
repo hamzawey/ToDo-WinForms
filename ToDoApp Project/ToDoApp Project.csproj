@@ -99,6 +99,12 @@
     <Compile Include="View\AdminRoleAppView.Designer.cs">
       <DependentUpon>AdminRoleAppView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AdminToDosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminToDosView.Designer.cs">
+      <DependentUpon>AdminToDosView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +117,17 @@
     <Compile Include="View\RegisterView.Designer.cs">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ToDoView.cs">
+    <Compile Include="View\ToDosView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ToDoView.Designer.cs">
-      <DependentUpon>ToDoView.cs</DependentUpon>
+    <Compile Include="View\ToDosView.Designer.cs">
+      <DependentUpon>ToDosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,14 +146,17 @@
     <EmbeddedResource Include="View\AdminRoleAppView.resx">
       <DependentUpon>AdminRoleAppView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminToDosView.resx">
+      <DependentUpon>AdminToDosView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RegisterView.resx">
       <DependentUpon>RegisterView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ToDoView.resx">
-      <DependentUpon>ToDoView.cs</DependentUpon>
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +168,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\ToDosView.resx">
+      <DependentUpon>ToDosView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserRoleAppView.resx">
       <DependentUpon>UserRoleAppView.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +185,7 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ToDoApp_Project.Model.ToDo.datasource" />
     <None Include="Properties\DataSources\ToDoApp_Project.Model.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
