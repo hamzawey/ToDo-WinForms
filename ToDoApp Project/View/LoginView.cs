@@ -66,7 +66,7 @@ namespace ToDoApp_Project.View
         private void btnGoBack_Click(object sender, EventArgs e)
         {
             Hide();
-            ToDoView view = new ToDoView();
+            MainView view = new MainView();
             view.Show();
         }
     }
