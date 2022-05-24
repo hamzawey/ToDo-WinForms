@@ -22,9 +22,19 @@ namespace ToDoApp_Project.View
 
         private void btnGoBack_Click(object sender, EventArgs e)
         {
-            Hide();
-            UserRoleAppView view = new UserRoleAppView();
-            view.Show();
+            if (LoginView.currentUserRole == "Admin")
+            {
+                Hide();
+                AdminRoleAppView view = new AdminRoleAppView();
+                view.Show();
+            }
+            else
+            {
+                Hide();
+                UserRoleAppView view = new UserRoleAppView();
+                view.Show();
+            }
+            
         }
     }
 }

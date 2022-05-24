@@ -27,7 +27,7 @@ namespace ToDoApp_Project.View
         private void ToDoListsButton_Click(object sender, EventArgs e)
         {
             Hide();
-            AdminToDosView view = new AdminToDosView();
+            ToDosView view = new ToDosView();
             view.Show();
         }
 

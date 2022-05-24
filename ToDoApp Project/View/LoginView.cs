@@ -14,6 +14,10 @@ namespace ToDoApp_Project.View
 {
     public partial class LoginView : Form
     {
+        public static int currentUserId = 0;
+        public static string currentUserName = "";
+        public static string currentUserRole = "";
+
         UserController userController = new UserController();
         public LoginView()
         {
@@ -37,12 +41,20 @@ namespace ToDoApp_Project.View
 
                     if (foundRole == "Admin")
                     {
+                        user.Role = "Admin";
+                        currentUserId = user.Id;
+                        currentUserName = user.Username;
+                        currentUserRole = user.Role;
                         Hide();
                         AdminRoleAppView adminView = new AdminRoleAppView();
                         adminView.Show();
                     }
                     else if (foundRole == "User")
                     {
+                        user.Role = "User";
+                        currentUserId = user.Id;
+                        currentUserName = user.Username;
+                        currentUserRole = user.Role;
                         Hide();
                         UserRoleAppView userView = new UserRoleAppView();
                         userView.Show();
