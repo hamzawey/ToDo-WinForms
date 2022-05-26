@@ -22,36 +22,36 @@ namespace ToDoApp_Project.View
 
         private void btnRegisterRegisterView_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            string username = txtBoxRegisterName.Text;
-            string password = txtBoxRegisterPassword.Text;
-            string userrole = "User";
-
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password) &&
-                !string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrEmpty(txtBoxRegisterName.Text) || string.IsNullOrEmpty(txtBoxRegisterPassword.Text) ||
+                string.IsNullOrWhiteSpace(txtBoxRegisterName.Text) || string.IsNullOrWhiteSpace(txtBoxRegisterPassword.Text))
             {
-                user.Username = username;
-                user.Password = password;
-                user.Role = userrole;
-                if (userController.doesUsernameExist(user))
-                {
-                    MessageBox.Show("Username already exists!", "Username is being used",
+                MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBoxRegisterName.Text = "";
+                txtBoxRegisterPassword.Text = "";
+            }
+            else
+            {
+                if (userController.doesUsernameExist(txtBoxRegisterName.Text))
+                {
+                    MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtBoxRegisterName.Text = "";
                     txtBoxRegisterPassword.Text = "";
                 }
                 else
                 {
+                    User user = new User();
+                    user.Username = txtBoxRegisterName.Text;
+                    user.Password = txtBoxRegisterPassword.Text;
+                    user.Role = "User";
+
                     userController.RegisterUser(user);
+
                     Hide();
                     LoginView login = new LoginView();
                     login.Show();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

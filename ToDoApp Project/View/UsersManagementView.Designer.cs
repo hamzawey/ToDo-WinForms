@@ -186,7 +186,6 @@
             this.lblDeleteManagement.TabIndex = 8;
             this.lblDeleteManagement.Text = "SELECT USER FROM THE GRID AND CLICK DELETE TO DELETE THE IT FROM THE DATABASE";
             this.lblDeleteManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDeleteManagement.Click += new System.EventHandler(this.lblDeleteManagement_Click);
             // 
             // lblCreateManagement
             // 
