@@ -32,46 +32,43 @@ namespace ToDoApp_Project.View
             user.Username = username;
             user.Password = password;
 
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password) &&
-                !string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) ||
+                string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                if (userController.tryToLogin(user))
-                {
-                    string foundRole = userController.findRole(user);
-
-                    if (foundRole == "Admin")
-                    {
-                        user.Role = "Admin";
-                        currentUserId = user.Id;
-                        currentUserName = user.Username;
-                        currentUserRole = user.Role;
-                        Hide();
-                        AdminRoleAppView adminView = new AdminRoleAppView();
-                        adminView.Show();
-                    }
-                    else if (foundRole == "User")
-                    {
-                        user.Role = "User";
-                        currentUserId = user.Id;
-                        currentUserName = user.Username;
-                        currentUserRole = user.Role;
-                        Hide();
-                        UserRoleAppView userView = new UserRoleAppView();
-                        userView.Show();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Error logging in!", "Invalid data",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtBoxSignInName.Text = "";
-                    txtBoxSignInPassword.Text = "";
-                }
+                MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBoxSignInName.Text = "";
+                txtBoxSignInPassword.Text = "";
+            }
+            else if(!userController.tryToLogin(user))
+            {
+                MessageBox.Show("Wrong username or password!", "PROVIDED DATA ERROR",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxSignInName.Text = "";
+                txtBoxSignInPassword.Text = "";
             }
             else
             {
-                MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
-                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string foundRole = userController.findRole(user);
+                user.Role = foundRole;
+                int findUserId = userController.findId(user);
+                user.Id = findUserId;
+
+                currentUserId = findUserId;
+                currentUserName = user.Username;
+                currentUserRole = foundRole;
+
+                if (foundRole == "Admin")
+                {
+                    AdminRoleAppView adminView = new AdminRoleAppView();
+                    adminView.Show();
+                }
+                else if (foundRole == "User")
+                {
+                    UserRoleAppView userView = new UserRoleAppView();
+                    userView.Show();
+                }
+                Hide();
             }
         }
 

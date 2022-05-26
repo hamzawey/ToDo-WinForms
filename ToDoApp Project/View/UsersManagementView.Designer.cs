@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvUserManagementView = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -60,6 +56,10 @@
             this.txtBoxDeleteById = new System.Windows.Forms.TextBox();
             this.lblDelByID = new System.Windows.Forms.Label();
             this.btnDeleteById = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagementView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -79,30 +79,6 @@
             this.dgvUserManagementView.Name = "dgvUserManagementView";
             this.dgvUserManagementView.Size = new System.Drawing.Size(447, 901);
             this.dgvUserManagementView.TabIndex = 0;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Username";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Username";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Role";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // userBindingSource
             // 
@@ -186,7 +162,6 @@
             this.lblDeleteManagement.TabIndex = 8;
             this.lblDeleteManagement.Text = "SELECT USER FROM THE GRID AND CLICK DELETE TO DELETE THE IT FROM THE DATABASE";
             this.lblDeleteManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDeleteManagement.Click += new System.EventHandler(this.lblDeleteManagement_Click);
             // 
             // lblCreateManagement
             // 
@@ -374,6 +349,30 @@
             this.btnDeleteById.Text = "DELETE BY ID";
             this.btnDeleteById.UseVisualStyleBackColor = false;
             this.btnDeleteById.Click += new System.EventHandler(this.btnDeleteById_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Username";
+            this.dataGridViewTextBoxColumn6.HeaderText = "USERNAME";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn7.HeaderText = "PASSWORD";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ROLE";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // UsersManagementView
             // 

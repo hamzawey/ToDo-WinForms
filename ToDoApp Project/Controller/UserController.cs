@@ -32,8 +32,7 @@ namespace ToDoApp_Project.Controller
         {
             using (AppDbModelEntities userEntities = new AppDbModelEntities())
             {
-                List<User> users = userEntities.Users.ToList();
-                foreach (var userExist in users)
+                foreach (var userExist in userEntities.Users.ToList())
                 {
                     if (userExist.Username == user.Username)
                     {
@@ -47,19 +46,37 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        public bool doesUsernameExist(User user)
+        public bool doesUsernameExist(string username)
         {
             using (AppDbModelEntities userEntities = new AppDbModelEntities())
             {
-                List<User> users = userEntities.Users.ToList();
-                foreach (var userExist in users)
+                foreach (var userExist in userEntities.Users.ToList())
                 {
-                    if (userExist.Username == user.Username)
+                    if (userExist.Username == username)
                     {
                         return true;
                     }
                 }
                 return false;
+            }
+        }
+
+        public int findId(User user)
+        {
+            using (AppDbModelEntities userEntities = new AppDbModelEntities())
+            {
+                int foundId = 0;
+                foreach (var userExist in userEntities.Users.ToList())
+                {
+                    if (userExist.Username == user.Username)
+                    {
+                        if (userExist.Role == user.Role)
+                        {
+                            foundId = userExist.Id;
+                        }
+                    }
+                }
+                return foundId;
             }
         }
 
@@ -70,6 +87,14 @@ namespace ToDoApp_Project.Controller
                 var userDel = userEntities.Users.Where(u => u.Id == id).FirstOrDefault();
                 if (userDel.Id == id)
                 {
+                    List<ToDo> todos = userEntities.ToDoes.Where(todo => todo.CreatorId == userDel.Id).ToList();
+                    if (todos.Count > 0)
+                    {
+                        foreach (var todo in todos)
+                        {
+                            userEntities.ToDoes.Remove(todo);
+                        }
+                    }
                     userEntities.Users.Remove(userDel);
                     userEntities.SaveChanges();
                 }
@@ -81,8 +106,7 @@ namespace ToDoApp_Project.Controller
             string foundRole = "";
             using (AppDbModelEntities userEntities = new AppDbModelEntities())
             {
-                var users = userEntities.Users.ToList();
-                foreach (var userExist in users)
+                foreach (var userExist in userEntities.Users.ToList())
                 {
                     if (userExist.Username == user.Username)
                     {
@@ -94,14 +118,13 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        public bool doesIdExist(User user)
+        public bool doesIdExist(int idCheck)
         {
             using (AppDbModelEntities userEntities = new AppDbModelEntities())
             {
-                List<User> users = userEntities.Users.ToList();
-                foreach (var userExist in users)
+                foreach (var userExist in userEntities.Users.ToList())
                 {
-                    if (userExist.Id == user.Id)
+                    if (userExist.Id == idCheck)
                     {
                         return true;
                     }
