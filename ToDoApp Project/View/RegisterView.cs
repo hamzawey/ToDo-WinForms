@@ -61,5 +61,15 @@ namespace ToDoApp_Project.View
             MainView view = new MainView();
             view.Show();
         }
+
+        private void RegisterView_Load(object sender, EventArgs e)
+        {
+            lblRegisterText.Text = "REGISTER";
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBoxRegisterPassword.UseSystemPasswordChar = !txtBoxRegisterPassword.UseSystemPasswordChar;
+        }
     }
 }

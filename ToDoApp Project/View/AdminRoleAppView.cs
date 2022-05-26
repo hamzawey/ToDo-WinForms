@@ -27,13 +27,19 @@ namespace ToDoApp_Project.View
         private void ToDoListsButton_Click(object sender, EventArgs e)
         {
             Hide();
-            ToDosView view = new ToDosView();
+            txtBoxCreateToDoTitle view = new txtBoxCreateToDoTitle();
             view.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void AdminRoleAppView_Load(object sender, EventArgs e)
+        {
+            adminMainLabel.Text = $"Welcome {LoginView.currentUserName}!";
+            adminRoleLabel.Text = "This is Admin Role Menu only!";
         }
     }
 }

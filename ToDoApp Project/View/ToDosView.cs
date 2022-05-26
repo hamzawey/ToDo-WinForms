@@ -12,10 +12,10 @@ using ToDoApp_Project.Model;
 
 namespace ToDoApp_Project.View
 {
-    public partial class ToDosView : Form
+    public partial class txtBoxCreateToDoTitle : Form
     {
         UserController userController = new UserController();
-        public ToDosView()
+        public txtBoxCreateToDoTitle()
         {
             InitializeComponent();
         }
@@ -35,6 +35,16 @@ namespace ToDoApp_Project.View
                 view.Show();
             }
             
+        }
+
+        private void btnCreateNewTodo_Click(object sender, EventArgs e)
+        {
+            // Id Title CreatedAt CreatorId LastChanged LastChangedUserId
+        }
+
+        private void btnUpdateToDo_Click(object sender, EventArgs e)
+        {
+            // LastChanged LastChangedUserId
         }
     }
 }
