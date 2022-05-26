@@ -89,6 +89,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\Task.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ToDo.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
@@ -127,6 +130,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ToDoTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ToDoTasks.Designer.cs">
+      <DependentUpon>ToDoTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserRoleAppView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +173,9 @@
     <EmbeddedResource Include="View\ToDosView.resx">
       <DependentUpon>ToDosView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ToDoTasks.resx">
+      <DependentUpon>ToDoTasks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserRoleAppView.resx">
       <DependentUpon>UserRoleAppView.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +190,7 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ToDoApp_Project.Model.Task.datasource" />
     <None Include="Properties\DataSources\ToDoApp_Project.Model.ToDo.datasource" />
     <None Include="Properties\DataSources\ToDoApp_Project.Model.User.datasource" />
     <None Include="Properties\Settings.settings">
@@ -226,6 +239,7 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
       <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\MfAdts.jpg" />
     <None Include="Resources\aec3fd35fa6dc8166e9836d0cccd44aa.jpg" />
     <None Include="Resources\Ocean-Wallpaper-scaled.jpg" />
     <None Include="Resources\601078.jpg" />

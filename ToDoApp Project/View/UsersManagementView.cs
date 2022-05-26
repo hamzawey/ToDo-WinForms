@@ -29,6 +29,19 @@ namespace ToDoApp_Project.View
             RefreshTable();
         }
 
+        private void ClearCreateBoxes()
+        {
+            txtBoxUsername.Text = "";
+            txtBoxPassword.Text = "";
+            txtBoxRole.Text = "";
+            txtBoxId.Text = "";
+        }
+        private void ClearEditBoxes()
+        {
+            txtEditName.Text = "";
+            txtEditPass.Text = "";
+            txtEditRole.Text = "";
+        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do really want to delete this user?", "IMPORTANT",
@@ -66,33 +79,32 @@ namespace ToDoApp_Project.View
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            int.TryParse(txtBoxId.Text, out int isNumberResult);
+
             if (string.IsNullOrEmpty(txtBoxUsername.Text) || string.IsNullOrEmpty(txtBoxPassword.Text)
                 || string.IsNullOrEmpty(txtBoxRole.Text) || string.IsNullOrEmpty(txtBoxId.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtBoxUsername.Text = "";
-                txtBoxPassword.Text = "";
-                txtBoxRole.Text = "";
-                txtBoxId.Text = "";
+                ClearCreateBoxes();
+            }
+            else if (isNumberResult == 0)
+            {
+                MessageBox.Show("Id must be a number!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ClearCreateBoxes();
             }
             else if (userController.doesUsernameExist(txtBoxUsername.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtBoxUsername.Text = "";
-                txtBoxPassword.Text = "";
-                txtBoxRole.Text = "";
-                txtBoxId.Text = "";
+                ClearCreateBoxes();
             }
             else if (userController.doesIdExist(int.Parse(txtBoxId.Text)))
             {
                 MessageBox.Show("Id is being used!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtBoxUsername.Text = "";
-                txtBoxPassword.Text = "";
-                txtBoxRole.Text = "";
-                txtBoxId.Text = "";
+                ClearCreateBoxes();
             }
             else
             {
@@ -103,10 +115,7 @@ namespace ToDoApp_Project.View
                 user.Id = int.Parse(txtBoxId.Text);
 
                 userController.RegisterUser(user);
-                txtBoxUsername.Text = "";
-                txtBoxPassword.Text = "";
-                txtBoxRole.Text = "";
-                txtBoxId.Text = "";
+                ClearCreateBoxes();
                 RefreshTable();
             }
         }
@@ -121,17 +130,13 @@ namespace ToDoApp_Project.View
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEditName.Text = "";
-                txtEditPass.Text = "";
-                txtEditRole.Text = "";
+                ClearEditBoxes();
             }
             else if(userController.doesUsernameExist(txtEditName.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEditName.Text = "";
-                txtEditPass.Text = "";
-                txtEditRole.Text = "";
+                ClearEditBoxes();
             }
             else
             {
@@ -141,24 +146,32 @@ namespace ToDoApp_Project.View
                 user.Role = txtEditRole.Text;
 
                 userController.EditUser(id, user);
-                txtEditName.Text = "";
-                txtEditPass.Text = "";
-                txtEditRole.Text = "";
+                ClearEditBoxes();
                 RefreshTable();
             }
         }
 
         private void btnDeleteById_Click(object sender, EventArgs e)
         {
+            int.TryParse(txtBoxId.Text, out int isNumberResult);
+
             if (string.IsNullOrEmpty(txtBoxDeleteById.Text) || string.IsNullOrWhiteSpace(txtBoxDeleteById.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtBoxDeleteById.Text = "";
+            }
+            else if (isNumberResult == 0)
+            {
+                MessageBox.Show("Id must be a number!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDeleteById.Text = "";
             }
             else if (!userController.doesIdExist(int.Parse(txtBoxDeleteById.Text)))
             {
                 MessageBox.Show($"User with Id: ${txtBoxDeleteById.Text} doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDeleteById.Text = "";
             }
             else
             {

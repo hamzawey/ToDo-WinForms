@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvUserManagementView = new System.Windows.Forms.DataGridView();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -60,12 +59,17 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserManagementView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUserManagementView
             // 
+            this.dgvUserManagementView.AllowUserToAddRows = false;
+            this.dgvUserManagementView.AllowUserToDeleteRows = false;
+            this.dgvUserManagementView.AllowUserToResizeColumns = false;
+            this.dgvUserManagementView.AllowUserToResizeRows = false;
             this.dgvUserManagementView.AutoGenerateColumns = false;
             this.dgvUserManagementView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvUserManagementView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -77,12 +81,10 @@
             this.dgvUserManagementView.DataSource = this.userBindingSource;
             this.dgvUserManagementView.Location = new System.Drawing.Point(12, 48);
             this.dgvUserManagementView.Name = "dgvUserManagementView";
-            this.dgvUserManagementView.Size = new System.Drawing.Size(447, 901);
+            this.dgvUserManagementView.ReadOnly = true;
+            this.dgvUserManagementView.RowHeadersVisible = false;
+            this.dgvUserManagementView.Size = new System.Drawing.Size(323, 901);
             this.dgvUserManagementView.TabIndex = 0;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(ToDoApp_Project.Model.User);
             // 
             // btnEdit
             // 
@@ -206,7 +208,7 @@
             this.lblUsersManagementBig.BackColor = System.Drawing.Color.Transparent;
             this.lblUsersManagementBig.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsersManagementBig.ForeColor = System.Drawing.Color.White;
-            this.lblUsersManagementBig.Location = new System.Drawing.Point(158, 12);
+            this.lblUsersManagementBig.Location = new System.Drawing.Point(86, 9);
             this.lblUsersManagementBig.Name = "lblUsersManagementBig";
             this.lblUsersManagementBig.Size = new System.Drawing.Size(177, 33);
             this.lblUsersManagementBig.TabIndex = 12;
@@ -355,24 +357,36 @@
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "ID";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 40;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Username";
             this.dataGridViewTextBoxColumn6.HeaderText = "USERNAME";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 90;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Password";
             this.dataGridViewTextBoxColumn7.HeaderText = "PASSWORD";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 110;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Role";
             this.dataGridViewTextBoxColumn8.HeaderText = "ROLE";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 80;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(ToDoApp_Project.Model.User);
             // 
             // UsersManagementView
             // 
