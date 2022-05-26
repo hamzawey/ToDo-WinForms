@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.userMainLabel = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.ToDoListsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // userMainLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(148, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 59);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "USER HOME";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.userMainLabel.BackColor = System.Drawing.Color.Transparent;
+            this.userMainLabel.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userMainLabel.ForeColor = System.Drawing.Color.MediumBlue;
+            this.userMainLabel.Location = new System.Drawing.Point(12, 65);
+            this.userMainLabel.Name = "userMainLabel";
+            this.userMainLabel.Size = new System.Drawing.Size(610, 59);
+            this.userMainLabel.TabIndex = 7;
+            this.userMainLabel.Text = "onload";
+            this.userMainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnExit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Location = new System.Drawing.Point(252, 322);
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.MediumBlue;
+            this.btnExit.Location = new System.Drawing.Point(252, 328);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(125, 44);
+            this.btnExit.Size = new System.Drawing.Size(130, 55);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -60,12 +60,12 @@
             // 
             // ToDoListsButton
             // 
-            this.ToDoListsButton.BackColor = System.Drawing.Color.MediumBlue;
-            this.ToDoListsButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToDoListsButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ToDoListsButton.Location = new System.Drawing.Point(252, 208);
+            this.ToDoListsButton.BackColor = System.Drawing.Color.White;
+            this.ToDoListsButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToDoListsButton.ForeColor = System.Drawing.Color.MediumBlue;
+            this.ToDoListsButton.Location = new System.Drawing.Point(252, 206);
             this.ToDoListsButton.Name = "ToDoListsButton";
-            this.ToDoListsButton.Size = new System.Drawing.Size(125, 44);
+            this.ToDoListsButton.Size = new System.Drawing.Size(130, 55);
             this.ToDoListsButton.TabIndex = 5;
             this.ToDoListsButton.Text = "ToDo Lists";
             this.ToDoListsButton.UseVisualStyleBackColor = false;
@@ -79,18 +79,19 @@
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.Ocean_Wallpaper_scaled;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 461);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.userMainLabel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.ToDoListsButton);
             this.Name = "UserRoleAppView";
-            this.Text = "ToDo App";
+            this.Text = "MAIN MENU";
+            this.Load += new System.EventHandler(this.UserRoleAppView_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label userMainLabel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button ToDoListsButton;
     }

@@ -20,13 +20,18 @@ namespace ToDoApp_Project.View
         private void ToDoListsButton_Click(object sender, EventArgs e)
         {
             Hide();
-            ToDosView view = new ToDosView();
+            txtBoxCreateToDoTitle view = new txtBoxCreateToDoTitle();
             view.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void UserRoleAppView_Load(object sender, EventArgs e)
+        {
+            userMainLabel.Text = $"Welcome {LoginView.currentUserName}";
         }
     }
 }

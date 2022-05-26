@@ -93,6 +93,16 @@ namespace ToDoApp_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aec3fd35fa6dc8166e9836d0cccd44aa {
+            get {
+                object obj = ResourceManager.GetObject("aec3fd35fa6dc8166e9836d0cccd44aa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ocean_Wallpaper_scaled {
             get {
                 object obj = ResourceManager.GetObject("Ocean-Wallpaper-scaled", resourceCulture);
@@ -106,6 +116,16 @@ namespace ToDoApp_Project.Properties {
         internal static System.Drawing.Bitmap p894hf7go2b51 {
             get {
                 object obj = ResourceManager.GetObject("p894hf7go2b51", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shutterstock_682265785_4_2e16d0ba_fill_1600x775 {
+            get {
+                object obj = ResourceManager.GetObject("shutterstock_682265785_4.2e16d0ba.fill-1600x775", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

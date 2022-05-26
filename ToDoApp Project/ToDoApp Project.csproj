@@ -226,6 +226,7 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
       <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\aec3fd35fa6dc8166e9836d0cccd44aa.jpg" />
     <None Include="Resources\Ocean-Wallpaper-scaled.jpg" />
     <None Include="Resources\601078.jpg" />
     <None Include="Resources\017566664036869b3f2d81312085887eac4c.jpg" />

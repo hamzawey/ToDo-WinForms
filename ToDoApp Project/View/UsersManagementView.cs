@@ -136,5 +136,10 @@ namespace ToDoApp_Project.View
             txtBoxDeleteById.Text = "";
             RefreshTable();
         }
+
+        private void lblDeleteManagement_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

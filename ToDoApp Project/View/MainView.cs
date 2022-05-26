@@ -20,7 +20,7 @@ namespace ToDoApp_Project
 
         private void ToDoView_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = "Welcome to ToDo App!";
+            lblWelcome.Text = "WELCOME TO TODO APP!";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

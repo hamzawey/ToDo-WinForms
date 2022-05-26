@@ -81,5 +81,15 @@ namespace ToDoApp_Project.View
             MainView view = new MainView();
             view.Show();
         }
+
+        private void LoginView_Load(object sender, EventArgs e)
+        {
+            lblSignInText.Text = "LOGIN";
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtBoxSignInPassword.UseSystemPasswordChar = !txtBoxSignInPassword.UseSystemPasswordChar;
+        }
     }
 }
