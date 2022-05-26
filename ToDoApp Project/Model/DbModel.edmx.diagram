@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="AppDbModel.ToDo" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="AppDbModel.User" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="AppDbModel.FK__ToDo__CreatorId__49C3F6B7" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AppDbModel.Task" Width="1.5" PointX="5.25" PointY="0.875" />
+        <AssociationConnector Association="AppDbModel.FK__Task__Id__5CD6CB2B" />
+        <AssociationConnector Association="AppDbModel.FK__Task__ToDoId__6FE99F9F" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

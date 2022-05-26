@@ -14,6 +14,8 @@ namespace ToDoApp_Project.View
 {
     public partial class ToDosView : Form
     {
+        public static int currentToDoId;
+        public static string currentToDoTitle;
         ToDoController todoController = new ToDoController();
         public ToDosView()
         {
@@ -25,9 +27,21 @@ namespace ToDoApp_Project.View
             RefreshTable();
         }
 
-        public void RefreshTable()
+        private void RefreshTable()
         {
             toDosDataGridView.DataSource = todoController.GetToDos(LoginView.currentUserId);
+        }
+
+        private void ClearCreateBoxes()
+        {
+            txtCreateId.Text = "";
+            txtCreateTitle.Text = "";
+        }
+
+        private void ClearEditBoxes()
+        {
+            txtEditId.Text = "";
+            txtEditTitle.Text = "";
         }
 
         private void btnGoBack_Click(object sender, EventArgs e)
@@ -44,7 +58,6 @@ namespace ToDoApp_Project.View
                 UserRoleAppView view = new UserRoleAppView();
                 view.Show();
             }
-            
         }
 
         private void btnCreateNewTodo_Click(object sender, EventArgs e)
@@ -53,22 +66,19 @@ namespace ToDoApp_Project.View
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtCreateId.Text = "";
-                txtCreateTitle.Text = "";
+                ClearCreateBoxes();
             }
-            else if(todoController.doesIdExist(int.Parse(txtCreateId.Text)))
+            else if(todoController.doesToDoIdExist(int.Parse(txtCreateId.Text)))
             {
                 MessageBox.Show("Id is being used!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCreateId.Text = "";
-                txtCreateTitle.Text = "";
+                ClearCreateBoxes();
             }
-            else if (todoController.doesTitleExist(txtCreateTitle.Text))
+            else if (todoController.doesToDoTitleExist(txtCreateTitle.Text))
             {
                 MessageBox.Show("Title already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCreateId.Text = "";
-                txtCreateTitle.Text = "";
+                ClearCreateBoxes();
             }
             else
             {
@@ -80,8 +90,7 @@ namespace ToDoApp_Project.View
                 newToDo.LastChanged = DateTime.Now;
                 newToDo.LastChangedUserId = LoginView.currentUserId;
                 todoController.CreateToDo(newToDo);
-                txtCreateId.Text = "";
-                txtCreateTitle.Text = "";
+                ClearCreateBoxes();
                 RefreshTable();
             }
         }
@@ -92,22 +101,19 @@ namespace ToDoApp_Project.View
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEditId.Text = "";
-                txtEditTitle.Text = "";
+                ClearEditBoxes();
             }
-            else if (!todoController.doesIdExist(int.Parse(txtEditId.Text)))
+            else if (!todoController.doesToDoIdExist(int.Parse(txtEditId.Text)))
             {
                 MessageBox.Show($"ToDo with Id: {txtEditId.Text} doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEditId.Text = "";
-                txtEditTitle.Text = "";
+                ClearEditBoxes();
             }
-            else if (todoController.doesTitleExist(txtEditTitle.Text))
+            else if (todoController.doesToDoTitleExist(txtEditTitle.Text))
             {
                 MessageBox.Show($"ToDo with Title: {txtEditTitle.Text} already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEditId.Text = "";
-                txtEditTitle.Text = "";
+                ClearEditBoxes();
             }
             else
             {
@@ -124,8 +130,7 @@ namespace ToDoApp_Project.View
                     MessageBox.Show("Error occured while trying to update the ToDo.", "UPDATE ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                txtEditId.Text = "";
-                txtEditTitle.Text = "";
+                ClearEditBoxes();
                 RefreshTable();
             }
         }
@@ -137,7 +142,7 @@ namespace ToDoApp_Project.View
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (!todoController.doesIdExist(int.Parse(txtDeleteById.Text)))
+            else if (!todoController.doesToDoIdExist(int.Parse(txtDeleteById.Text)))
             {
                 MessageBox.Show("Id doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -148,7 +153,7 @@ namespace ToDoApp_Project.View
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (result == DialogResult.OK)
                 {
-                    todoController.deleteById(int.Parse(txtDeleteById.Text));
+                    todoController.deleteToDoById(int.Parse(txtDeleteById.Text));
                     txtDeleteById.Text = "";
                     RefreshTable();
                 }
@@ -158,6 +163,21 @@ namespace ToDoApp_Project.View
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void btnFindTasks_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = toDosDataGridView.CurrentRow;
+            currentToDoId = int.Parse(row.Cells[0].Value.ToString());
+            currentToDoTitle = row.Cells[1].Value.ToString();
+            Hide();
+            ToDoTasks view = new ToDoTasks();
+            view.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

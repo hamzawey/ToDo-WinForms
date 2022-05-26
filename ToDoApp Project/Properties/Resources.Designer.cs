@@ -103,6 +103,16 @@ namespace ToDoApp_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MfAdts {
+            get {
+                object obj = ResourceManager.GetObject("MfAdts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ocean_Wallpaper_scaled {
             get {
                 object obj = ResourceManager.GetObject("Ocean-Wallpaper-scaled", resourceCulture);

@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toDosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toDoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnGoBack = new System.Windows.Forms.Button();
             this.btnDeleteByIdTodo = new System.Windows.Forms.Button();
@@ -47,18 +53,18 @@
             this.txtEditTitle = new System.Windows.Forms.TextBox();
             this.lblEditId = new System.Windows.Forms.Label();
             this.txtEditId = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFindTasks = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.toDosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toDoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toDosDataGridView
             // 
+            this.toDosDataGridView.AllowUserToAddRows = false;
+            this.toDosDataGridView.AllowUserToDeleteRows = false;
+            this.toDosDataGridView.AllowUserToResizeColumns = false;
+            this.toDosDataGridView.AllowUserToResizeRows = false;
             this.toDosDataGridView.AutoGenerateColumns = false;
             this.toDosDataGridView.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.toDosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -72,8 +78,58 @@
             this.toDosDataGridView.DataSource = this.toDoBindingSource;
             this.toDosDataGridView.Location = new System.Drawing.Point(12, 12);
             this.toDosDataGridView.Name = "toDosDataGridView";
-            this.toDosDataGridView.Size = new System.Drawing.Size(614, 637);
+            this.toDosDataGridView.ReadOnly = true;
+            this.toDosDataGridView.RowHeadersVisible = false;
+            this.toDosDataGridView.Size = new System.Drawing.Size(517, 687);
             this.toDosDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Title";
+            this.dataGridViewTextBoxColumn2.HeaderText = "TITLE";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CreatedAt";
+            this.dataGridViewTextBoxColumn3.HeaderText = "CREATED AT";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "CreatorId";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CREATOR ID";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "LastChanged";
+            this.dataGridViewTextBoxColumn5.HeaderText = "LAST CHANGED";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LastChangedUserId";
+            this.dataGridViewTextBoxColumn6.HeaderText = "CHANGER ID";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 70;
             // 
             // toDoBindingSource
             // 
@@ -84,7 +140,7 @@
             this.btnGoBack.BackColor = System.Drawing.Color.White;
             this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.Blue;
-            this.btnGoBack.Location = new System.Drawing.Point(1342, 594);
+            this.btnGoBack.Location = new System.Drawing.Point(1192, 644);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(130, 55);
             this.btnGoBack.TabIndex = 12;
@@ -97,7 +153,7 @@
             this.btnDeleteByIdTodo.BackColor = System.Drawing.Color.White;
             this.btnDeleteByIdTodo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteByIdTodo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnDeleteByIdTodo.Location = new System.Drawing.Point(952, 330);
+            this.btnDeleteByIdTodo.Location = new System.Drawing.Point(855, 265);
             this.btnDeleteByIdTodo.Name = "btnDeleteByIdTodo";
             this.btnDeleteByIdTodo.Size = new System.Drawing.Size(130, 55);
             this.btnDeleteByIdTodo.TabIndex = 13;
@@ -110,9 +166,9 @@
             this.lblDeleteByIdToDo.BackColor = System.Drawing.Color.Transparent;
             this.lblDeleteByIdToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteByIdToDo.ForeColor = System.Drawing.Color.White;
-            this.lblDeleteByIdToDo.Location = new System.Drawing.Point(637, 262);
+            this.lblDeleteByIdToDo.Location = new System.Drawing.Point(535, 201);
             this.lblDeleteByIdToDo.Name = "lblDeleteByIdToDo";
-            this.lblDeleteByIdToDo.Size = new System.Drawing.Size(835, 27);
+            this.lblDeleteByIdToDo.Size = new System.Drawing.Size(785, 27);
             this.lblDeleteByIdToDo.TabIndex = 14;
             this.lblDeleteByIdToDo.Text = "To delete a ToDo, please provide Id and click DELETE BY ID";
             this.lblDeleteByIdToDo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,9 +178,9 @@
             this.lblCreateToDo.BackColor = System.Drawing.Color.Transparent;
             this.lblCreateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateToDo.ForeColor = System.Drawing.Color.White;
-            this.lblCreateToDo.Location = new System.Drawing.Point(632, 49);
+            this.lblCreateToDo.Location = new System.Drawing.Point(545, 9);
             this.lblCreateToDo.Name = "lblCreateToDo";
-            this.lblCreateToDo.Size = new System.Drawing.Size(840, 27);
+            this.lblCreateToDo.Size = new System.Drawing.Size(775, 27);
             this.lblCreateToDo.TabIndex = 16;
             this.lblCreateToDo.Text = "To create a ToDo, please provide Id and Title";
             this.lblCreateToDo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,7 +190,7 @@
             this.btnCreateNewTodo.BackColor = System.Drawing.Color.White;
             this.btnCreateNewTodo.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateNewTodo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnCreateNewTodo.Location = new System.Drawing.Point(952, 161);
+            this.btnCreateNewTodo.Location = new System.Drawing.Point(855, 121);
             this.btnCreateNewTodo.Name = "btnCreateNewTodo";
             this.btnCreateNewTodo.Size = new System.Drawing.Size(130, 55);
             this.btnCreateNewTodo.TabIndex = 15;
@@ -147,9 +203,9 @@
             this.lblEditToDo.BackColor = System.Drawing.Color.Transparent;
             this.lblEditToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditToDo.ForeColor = System.Drawing.Color.White;
-            this.lblEditToDo.Location = new System.Drawing.Point(637, 435);
+            this.lblEditToDo.Location = new System.Drawing.Point(540, 345);
             this.lblEditToDo.Name = "lblEditToDo";
-            this.lblEditToDo.Size = new System.Drawing.Size(835, 27);
+            this.lblEditToDo.Size = new System.Drawing.Size(780, 27);
             this.lblEditToDo.TabIndex = 20;
             this.lblEditToDo.Text = "To edit a ToDo, please provide Id and Title and click UPDATE";
             this.lblEditToDo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,7 +215,7 @@
             this.btnUpdateToDo.BackColor = System.Drawing.Color.White;
             this.btnUpdateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateToDo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdateToDo.Location = new System.Drawing.Point(952, 564);
+            this.btnUpdateToDo.Location = new System.Drawing.Point(855, 467);
             this.btnUpdateToDo.Name = "btnUpdateToDo";
             this.btnUpdateToDo.Size = new System.Drawing.Size(130, 55);
             this.btnUpdateToDo.TabIndex = 19;
@@ -169,7 +225,7 @@
             // 
             // txtCreateId
             // 
-            this.txtCreateId.Location = new System.Drawing.Point(884, 125);
+            this.txtCreateId.Location = new System.Drawing.Point(787, 85);
             this.txtCreateId.Name = "txtCreateId";
             this.txtCreateId.Size = new System.Drawing.Size(117, 20);
             this.txtCreateId.TabIndex = 21;
@@ -181,7 +237,7 @@
             this.lblCreateId.BackColor = System.Drawing.Color.Transparent;
             this.lblCreateId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateId.ForeColor = System.Drawing.Color.White;
-            this.lblCreateId.Location = new System.Drawing.Point(926, 90);
+            this.lblCreateId.Location = new System.Drawing.Point(829, 50);
             this.lblCreateId.Name = "lblCreateId";
             this.lblCreateId.Size = new System.Drawing.Size(29, 24);
             this.lblCreateId.TabIndex = 23;
@@ -193,7 +249,7 @@
             this.lblCreateTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblCreateTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateTitle.ForeColor = System.Drawing.Color.White;
-            this.lblCreateTitle.Location = new System.Drawing.Point(1053, 90);
+            this.lblCreateTitle.Location = new System.Drawing.Point(956, 50);
             this.lblCreateTitle.Name = "lblCreateTitle";
             this.lblCreateTitle.Size = new System.Drawing.Size(66, 24);
             this.lblCreateTitle.TabIndex = 25;
@@ -201,7 +257,7 @@
             // 
             // txtCreateTitle
             // 
-            this.txtCreateTitle.Location = new System.Drawing.Point(1029, 125);
+            this.txtCreateTitle.Location = new System.Drawing.Point(932, 85);
             this.txtCreateTitle.Name = "txtCreateTitle";
             this.txtCreateTitle.Size = new System.Drawing.Size(117, 20);
             this.txtCreateTitle.TabIndex = 24;
@@ -209,7 +265,7 @@
             // 
             // txtDeleteById
             // 
-            this.txtDeleteById.Location = new System.Drawing.Point(978, 304);
+            this.txtDeleteById.Location = new System.Drawing.Point(881, 239);
             this.txtDeleteById.Name = "txtDeleteById";
             this.txtDeleteById.Size = new System.Drawing.Size(77, 20);
             this.txtDeleteById.TabIndex = 26;
@@ -221,7 +277,7 @@
             this.lblEditTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblEditTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTitle.ForeColor = System.Drawing.Color.White;
-            this.lblEditTitle.Location = new System.Drawing.Point(1053, 487);
+            this.lblEditTitle.Location = new System.Drawing.Point(956, 391);
             this.lblEditTitle.Name = "lblEditTitle";
             this.lblEditTitle.Size = new System.Drawing.Size(66, 24);
             this.lblEditTitle.TabIndex = 30;
@@ -229,7 +285,7 @@
             // 
             // txtEditTitle
             // 
-            this.txtEditTitle.Location = new System.Drawing.Point(1029, 522);
+            this.txtEditTitle.Location = new System.Drawing.Point(932, 426);
             this.txtEditTitle.Name = "txtEditTitle";
             this.txtEditTitle.Size = new System.Drawing.Size(117, 20);
             this.txtEditTitle.TabIndex = 29;
@@ -241,7 +297,7 @@
             this.lblEditId.BackColor = System.Drawing.Color.Transparent;
             this.lblEditId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditId.ForeColor = System.Drawing.Color.White;
-            this.lblEditId.Location = new System.Drawing.Point(926, 487);
+            this.lblEditId.Location = new System.Drawing.Point(829, 391);
             this.lblEditId.Name = "lblEditId";
             this.lblEditId.Size = new System.Drawing.Size(29, 24);
             this.lblEditId.TabIndex = 28;
@@ -249,53 +305,37 @@
             // 
             // txtEditId
             // 
-            this.txtEditId.Location = new System.Drawing.Point(884, 522);
+            this.txtEditId.Location = new System.Drawing.Point(787, 426);
             this.txtEditId.Name = "txtEditId";
             this.txtEditId.Size = new System.Drawing.Size(117, 20);
             this.txtEditId.TabIndex = 27;
             this.txtEditId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dataGridViewTextBoxColumn1
+            // btnFindTasks
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.btnFindTasks.BackColor = System.Drawing.Color.White;
+            this.btnFindTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindTasks.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnFindTasks.Location = new System.Drawing.Point(857, 603);
+            this.btnFindTasks.Name = "btnFindTasks";
+            this.btnFindTasks.Size = new System.Drawing.Size(130, 55);
+            this.btnFindTasks.TabIndex = 31;
+            this.btnFindTasks.Text = "TASKS";
+            this.btnFindTasks.UseVisualStyleBackColor = false;
+            this.btnFindTasks.Click += new System.EventHandler(this.btnFindTasks_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // label1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Title";
-            this.dataGridViewTextBoxColumn2.HeaderText = "TITLE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CreatedAt";
-            this.dataGridViewTextBoxColumn3.HeaderText = "CREATED AT";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 110;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "CreatorId";
-            this.dataGridViewTextBoxColumn4.HeaderText = "CREATOR ID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "LastChanged";
-            this.dataGridViewTextBoxColumn5.HeaderText = "LAST CHANGED";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 110;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "LastChangedUserId";
-            this.dataGridViewTextBoxColumn6.HeaderText = "CHANGER ID";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 70;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(542, 548);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(780, 39);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Select a ToDo from the table and click TASKS to find if it has tasks";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ToDosView
             // 
@@ -304,7 +344,9 @@
             this.BackColor = System.Drawing.Color.Navy;
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.aec3fd35fa6dc8166e9836d0cccd44aa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1484, 661);
+            this.ClientSize = new System.Drawing.Size(1334, 711);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnFindTasks);
             this.Controls.Add(this.lblEditTitle);
             this.Controls.Add(this.txtEditTitle);
             this.Controls.Add(this.lblEditId);
@@ -358,11 +400,13 @@
         private System.Windows.Forms.TextBox txtEditTitle;
         private System.Windows.Forms.Label lblEditId;
         private System.Windows.Forms.TextBox txtEditId;
+        private System.Windows.Forms.Button btnFindTasks;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label label1;
     }
 }
