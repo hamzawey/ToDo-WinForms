@@ -72,8 +72,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\ToDoController.cs" />
-    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controllers\ToDoController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Model\DbModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,89 +98,89 @@
     <Compile Include="Model\User.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\AdminRoleAppView.cs">
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Authorized\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\AdminRoleAppView.Designer.cs">
-      <DependentUpon>AdminRoleAppView.cs</DependentUpon>
+    <Compile Include="Views\Authorized\AdminView.Designer.cs">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\LoginView.cs">
+    <Compile Include="Views\Unauthorized\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\LoginView.Designer.cs">
-      <DependentUpon>LoginView.cs</DependentUpon>
+    <Compile Include="Views\Unauthorized\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\RegisterView.cs">
+    <Compile Include="Views\Unauthorized\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\RegisterView.Designer.cs">
-      <DependentUpon>RegisterView.cs</DependentUpon>
+    <Compile Include="Views\Unauthorized\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ToDosView.cs">
+    <Compile Include="Views\Management\ManageToDos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ToDosView.Designer.cs">
-      <DependentUpon>ToDosView.cs</DependentUpon>
+    <Compile Include="Views\Management\ManageToDos.Designer.cs">
+      <DependentUpon>ManageToDos.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\MainView.cs">
+    <Compile Include="Views\Unauthorized\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\MainView.Designer.cs">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <Compile Include="Views\Unauthorized\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ToDoTasks.cs">
+    <Compile Include="Views\Management\ManageTasks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ToDoTasks.Designer.cs">
-      <DependentUpon>ToDoTasks.cs</DependentUpon>
+    <Compile Include="Views\Management\ManageTasks.Designer.cs">
+      <DependentUpon>ManageTasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UserRoleAppView.cs">
+    <Compile Include="Views\Authorized\UserView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\UserRoleAppView.Designer.cs">
-      <DependentUpon>UserRoleAppView.cs</DependentUpon>
+    <Compile Include="Views\Authorized\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\UsersManagementView.cs">
+    <Compile Include="Views\Management\ManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\UsersManagementView.Designer.cs">
-      <DependentUpon>UsersManagementView.cs</DependentUpon>
+    <Compile Include="Views\Management\ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\AdminRoleAppView.resx">
-      <DependentUpon>AdminRoleAppView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Authorized\AdminView.resx">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\LoginView.resx">
-      <DependentUpon>LoginView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Unauthorized\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\RegisterView.resx">
-      <DependentUpon>RegisterView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Unauthorized\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MainView.resx">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Unauthorized\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="View\ToDosView.resx">
-      <DependentUpon>ToDosView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Management\ManageToDos.resx">
+      <DependentUpon>ManageToDos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ToDoTasks.resx">
-      <DependentUpon>ToDoTasks.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Management\ManageTasks.resx">
+      <DependentUpon>ManageTasks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserRoleAppView.resx">
-      <DependentUpon>UserRoleAppView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Authorized\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UsersManagementView.resx">
-      <DependentUpon>UsersManagementView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Management\ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\DbModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -239,13 +239,7 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
       <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\MfAdts.jpg" />
-    <None Include="Resources\aec3fd35fa6dc8166e9836d0cccd44aa.jpg" />
-    <None Include="Resources\Ocean-Wallpaper-scaled.jpg" />
-    <None Include="Resources\601078.jpg" />
-    <None Include="Resources\017566664036869b3f2d81312085887eac4c.jpg" />
-    <None Include="Resources\p894hf7go2b51.jpg" />
-    <None Include="Resources\360_F_300808649_zCM3DACzRfbgSaZ2RsyDLZqIsf6Nh3hW.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
