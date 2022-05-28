@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblHeaderLogin = new System.Windows.Forms.Label();
             this.lblLoginName = new System.Windows.Forms.Label();
             this.lblLoginPassword = new System.Windows.Forms.Label();
@@ -41,11 +42,11 @@
             // lblHeaderLogin
             // 
             this.lblHeaderLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeaderLogin.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeaderLogin.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeaderLogin.ForeColor = System.Drawing.Color.White;
-            this.lblHeaderLogin.Location = new System.Drawing.Point(12, 28);
+            this.lblHeaderLogin.Location = new System.Drawing.Point(0, 9);
             this.lblHeaderLogin.Name = "lblHeaderLogin";
-            this.lblHeaderLogin.Size = new System.Drawing.Size(560, 50);
+            this.lblHeaderLogin.Size = new System.Drawing.Size(584, 69);
             this.lblHeaderLogin.TabIndex = 0;
             this.lblHeaderLogin.Text = "LOGIN";
             this.lblHeaderLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -53,24 +54,26 @@
             // lblLoginName
             // 
             this.lblLoginName.BackColor = System.Drawing.Color.Transparent;
-            this.lblLoginName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginName.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginName.ForeColor = System.Drawing.Color.White;
             this.lblLoginName.Location = new System.Drawing.Point(89, 111);
             this.lblLoginName.Name = "lblLoginName";
             this.lblLoginName.Size = new System.Drawing.Size(80, 23);
             this.lblLoginName.TabIndex = 1;
             this.lblLoginName.Text = "NAME";
+            this.lblLoginName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblLoginPassword
             // 
             this.lblLoginPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblLoginPassword.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginPassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginPassword.ForeColor = System.Drawing.Color.White;
             this.lblLoginPassword.Location = new System.Drawing.Point(374, 111);
             this.lblLoginPassword.Name = "lblLoginPassword";
             this.lblLoginPassword.Size = new System.Drawing.Size(150, 23);
             this.lblLoginPassword.TabIndex = 2;
             this.lblLoginPassword.Text = "PASSWORD";
+            this.lblLoginPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtLoginPassword
             // 
@@ -90,9 +93,10 @@
             // btnLoginUser
             // 
             this.btnLoginUser.BackColor = System.Drawing.Color.White;
+            this.btnLoginUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
             this.btnLoginUser.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginUser.ForeColor = System.Drawing.Color.Black;
-            this.btnLoginUser.Location = new System.Drawing.Point(226, 235);
+            this.btnLoginUser.ForeColor = System.Drawing.Color.Orange;
+            this.btnLoginUser.Location = new System.Drawing.Point(229, 240);
             this.btnLoginUser.Name = "btnLoginUser";
             this.btnLoginUser.Size = new System.Drawing.Size(130, 47);
             this.btnLoginUser.TabIndex = 5;
@@ -103,11 +107,12 @@
             // btnGoBack
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.White;
+            this.btnGoBack.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
             this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.ForeColor = System.Drawing.Color.Black;
+            this.btnGoBack.ForeColor = System.Drawing.Color.Orange;
             this.btnGoBack.Location = new System.Drawing.Point(458, 316);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(114, 33);
+            this.btnGoBack.Size = new System.Drawing.Size(116, 37);
             this.btnGoBack.TabIndex = 6;
             this.btnGoBack.Text = "GO BACK";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -132,6 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.img3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.checkShowPassword);
@@ -142,6 +148,8 @@
             this.Controls.Add(this.lblLoginPassword);
             this.Controls.Add(this.lblLoginName);
             this.Controls.Add(this.lblHeaderLogin);
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

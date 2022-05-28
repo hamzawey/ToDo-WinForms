@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ToDo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -88,6 +91,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SharedToDo.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Task.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
@@ -239,6 +245,15 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
       <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
+    <Content Include="ToDo.ico" />
+    <None Include="Resources\img8.png" />
+    <None Include="Resources\img7.jpg" />
+    <None Include="Resources\img6.png" />
+    <None Include="Resources\img5.jpg" />
+    <None Include="Resources\img4.jpg" />
+    <None Include="Resources\img1.jpg" />
+    <None Include="Resources\img3.jpg" />
+    <None Include="Resources\img2.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

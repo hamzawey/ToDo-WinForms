@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageTasks));
             this.dgvTasks = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,7 +79,7 @@
             this.dgvTasks.AllowUserToResizeColumns = false;
             this.dgvTasks.AllowUserToResizeRows = false;
             this.dgvTasks.AutoGenerateColumns = false;
-            this.dgvTasks.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            this.dgvTasks.BackgroundColor = System.Drawing.Color.RoyalBlue;
             this.dgvTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -91,7 +92,7 @@
             this.lastChangedDataGridViewTextBoxColumn,
             this.lastChangeUserIdDataGridViewTextBoxColumn});
             this.dgvTasks.DataSource = this.taskBindingSource;
-            this.dgvTasks.GridColor = System.Drawing.Color.OrangeRed;
+            this.dgvTasks.GridColor = System.Drawing.Color.RoyalBlue;
             this.dgvTasks.Location = new System.Drawing.Point(12, 53);
             this.dgvTasks.Name = "dgvTasks";
             this.dgvTasks.ReadOnly = true;
@@ -170,7 +171,7 @@
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.White;
             this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnGoBack.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnGoBack.Location = new System.Drawing.Point(1442, 694);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(130, 55);
@@ -208,7 +209,7 @@
             // 
             this.btnToggleComplete.BackColor = System.Drawing.Color.White;
             this.btnToggleComplete.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToggleComplete.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnToggleComplete.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnToggleComplete.Location = new System.Drawing.Point(1073, 107);
             this.btnToggleComplete.Name = "btnToggleComplete";
             this.btnToggleComplete.Size = new System.Drawing.Size(130, 59);
@@ -221,7 +222,7 @@
             // 
             this.btnDeleteByIdTask.BackColor = System.Drawing.Color.White;
             this.btnDeleteByIdTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteByIdTask.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnDeleteByIdTask.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnDeleteByIdTask.Location = new System.Drawing.Point(1073, 261);
             this.btnDeleteByIdTask.Name = "btnDeleteByIdTask";
             this.btnDeleteByIdTask.Size = new System.Drawing.Size(130, 59);
@@ -306,7 +307,7 @@
             // 
             this.btnCreateTask.BackColor = System.Drawing.Color.White;
             this.btnCreateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateTask.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnCreateTask.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnCreateTask.Location = new System.Drawing.Point(1073, 461);
             this.btnCreateTask.Name = "btnCreateTask";
             this.btnCreateTask.Size = new System.Drawing.Size(130, 55);
@@ -451,7 +452,7 @@
             // 
             this.btnUpdateTask.BackColor = System.Drawing.Color.White;
             this.btnUpdateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateTask.ForeColor = System.Drawing.Color.OrangeRed;
+            this.btnUpdateTask.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnUpdateTask.Location = new System.Drawing.Point(1068, 669);
             this.btnUpdateTask.Name = "btnUpdateTask";
             this.btnUpdateTask.Size = new System.Drawing.Size(130, 55);
@@ -477,6 +478,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.img7;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1584, 761);
             this.Controls.Add(this.lblTrueFalseText);
@@ -508,6 +510,7 @@
             this.Controls.Add(this.lblToDoNameForTasks);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.dgvTasks);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageTasks";
             this.Text = "ToDoTasks";
             this.Load += new System.EventHandler(this.ToDoTasks_Load);

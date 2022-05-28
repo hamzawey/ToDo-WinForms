@@ -68,6 +68,20 @@ namespace ToDoApp_Project.View
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ClearCreateBoxes();
             }
+            else if (txtManageCreateUsername.Text.Length < 3 || txtManageCreateUsername.Text.Length > 19)
+            {
+                MessageBox.Show("Name must be between 3 - 19 characters!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ClearCreateBoxes();
+            }
+            else if (txtManageCreatePassword.Text.Length < 6 || txtManageCreatePassword.Text.Length > 19)
+            {
+                MessageBox.Show("Password must be between 6 - 19 characters!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ClearCreateBoxes();
+            }
             else if (userController.DoesUsernameExist(txtManageCreateUsername.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
@@ -82,35 +96,46 @@ namespace ToDoApp_Project.View
             }
             else
             {
-                if (txtManageCreateRole.Text == "Admin")
-                {
-                    User user = new User();
-                    user.Username = txtManageCreateUsername.Text;
-                    user.Password = txtManageCreatePassword.Text;
-                    user.Role = txtManageCreateRole.Text;
-                    user.Id = int.Parse(txtManageCreateId.Text);
+                DialogResult result = MessageBox.Show($"Do you really want to continue with these changes?\n" +
+                    $"Id => {txtManageCreateId.Text}\n" +
+                    $"Username => {txtManageCreateUsername.Text}\n" +
+                    $"Password => {txtManageCreatePassword.Text}\n" +
+                    $"Role => {txtManageCreateRole.Text}", "IMPORTANT",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-                    userController.ManageMenuRegisterUser(user);
-                    ClearCreateBoxes();
-                    RefreshTable();
-                }
-                else if (txtManageCreateRole.Text == "User")
+                if (result == DialogResult.OK)
                 {
-                    User user = new User();
-                    user.Username = txtManageCreateUsername.Text;
-                    user.Password = txtManageCreatePassword.Text;
-                    user.Role = txtManageCreateRole.Text;
-                    user.Id = int.Parse(txtManageCreateId.Text);
+                    if (txtManageCreateRole.Text == "Admin")
+                    {
+                        User user = new User();
+                        string usernameFixed = txtManageCreateUsername.Text.Replace(" ", string.Empty);
+                        user.Username = usernameFixed;
+                        user.Password = txtManageCreatePassword.Text;
+                        user.Role = txtManageCreateRole.Text;
+                        user.Id = int.Parse(txtManageCreateId.Text);
 
-                    userController.ManageMenuRegisterUser(user);
-                    ClearCreateBoxes();
-                    RefreshTable();
-                }
-                else
-                {
-                    MessageBox.Show("Role must be only User or Admin!", "PROVIDED DATA ERROR",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ClearCreateBoxes();
+                        userController.ManageMenuRegisterUser(user);
+                        ClearCreateBoxes();
+                        RefreshTable();
+                    }
+                    else if (txtManageCreateRole.Text == "User")
+                    {
+                        User user = new User();
+                        user.Username = txtManageCreateUsername.Text;
+                        user.Password = txtManageCreatePassword.Text;
+                        user.Role = txtManageCreateRole.Text;
+                        user.Id = int.Parse(txtManageCreateId.Text);
+
+                        userController.ManageMenuRegisterUser(user);
+                        ClearCreateBoxes();
+                        RefreshTable();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Role must be only User or Admin!", "PROVIDED DATA ERROR",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearCreateBoxes();
+                    }
                 }
             }
         }
@@ -145,7 +170,7 @@ namespace ToDoApp_Project.View
 
         private void btnManageDeleteById_Click(object sender, EventArgs e)
         {
-            int.TryParse(txtManageCreateId.Text, out int isNumberResult);
+            int.TryParse(txtManageDeleteById.Text, out int isNumberResult);
 
             if (string.IsNullOrEmpty(txtManageDeleteById.Text) || string.IsNullOrWhiteSpace(txtManageDeleteById.Text))
             {
@@ -206,6 +231,20 @@ namespace ToDoApp_Project.View
                 EmptyBoxMessage();
                 ClearEditBoxes();
             }
+            else if (txtManageEditUsername.Text.Length < 3 || txtManageEditUsername.Text.Length > 19)
+            {
+                MessageBox.Show("Name must be between 3 - 19 characters!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ClearEditBoxes();
+            }
+            else if (txtManageEditPassword.Text.Length < 6 || txtManageEditPassword.Text.Length > 19)
+            {
+                MessageBox.Show("Password must be between 6 - 19 characters!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ClearEditBoxes();
+            }
             else if (userController.DoesUsernameExist(txtManageEditUsername.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
@@ -214,14 +253,44 @@ namespace ToDoApp_Project.View
             }
             else
             {
-                User user = new User();
-                user.Username = txtManageEditUsername.Text;
-                user.Password = txtManageEditPassword.Text;
-                user.Role = txtManageEditRole.Text;
+                DialogResult result = MessageBox.Show($"Do you really want to continue with these changes?\n" +
+                    $"{row.Cells[1].Value} => {txtManageEditUsername.Text}\n" +
+                    $"{row.Cells[2].Value} => {txtManageEditPassword.Text}\n" +
+                    $"{row.Cells[3].Value} => {txtManageEditRole.Text}", "IMPORTANT",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-                userController.EditUser(id, user);
-                ClearEditBoxes();
-                RefreshTable();
+                if (result == DialogResult.OK)
+                {
+                    if (txtManageEditRole.Text == "Admin")
+                    {
+                        User user = new User();
+                        string usernameFixed = txtManageEditUsername.Text.Replace(" ", string.Empty);
+                        user.Username = usernameFixed;
+                        user.Password = txtManageEditPassword.Text;
+                        user.Role = txtManageEditRole.Text;
+
+                        userController.EditUser(id, user);
+                        ClearEditBoxes();
+                        RefreshTable();
+                    }
+                    else if (txtManageEditRole.Text == "User")
+                    {
+                        User user = new User();
+                        user.Username = txtManageEditUsername.Text;
+                        user.Password = txtManageEditPassword.Text;
+                        user.Role = txtManageEditRole.Text;
+
+                        userController.EditUser(id, user);
+                        ClearEditBoxes();
+                        RefreshTable();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Role must be only User or Admin!", "PROVIDED DATA ERROR",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClearEditBoxes();
+                    }
+                }
             }
         }
     }

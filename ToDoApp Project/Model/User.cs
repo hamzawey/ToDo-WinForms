@@ -17,7 +17,7 @@ namespace ToDoApp_Project.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.ToDoes = new HashSet<ToDo>();
+            this.ToDo = new HashSet<ToDo>();
         }
     
         public int Id { get; set; }
@@ -26,6 +26,6 @@ namespace ToDoApp_Project.Model
         public string Role { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ToDo> ToDoes { get; set; }
+        public virtual ICollection<ToDo> ToDo { get; set; }
     }
 }

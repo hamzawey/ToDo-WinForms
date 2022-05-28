@@ -11,6 +11,8 @@
         <EntityTypeShape EntityType="AppDbModel.Task" Width="1.5" PointX="5.25" PointY="0.875" />
         <AssociationConnector Association="AppDbModel.FK__Task__Id__5CD6CB2B" />
         <AssociationConnector Association="AppDbModel.FK__Task__ToDoId__6FE99F9F" />
+        <EntityTypeShape EntityType="AppDbModel.SharedToDo" Width="1.5" PointX="5.25" PointY="5.5" />
+        <AssociationConnector Association="AppDbModel.FK__SharedToD__ToDoI__02FC7413" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

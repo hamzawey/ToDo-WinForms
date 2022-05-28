@@ -28,31 +28,46 @@ namespace ToDoApp_Project.View
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                txtRegisterName.Text = "";
+                txtRegisterPassword.Text = "";
+            }
+            else if (txtRegisterName.Text.Length < 3 || txtRegisterName.Text.Length > 19)
+            {
+                MessageBox.Show("Name must be between 3 - 19 characters!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtRegisterName.Text = "";
+                txtRegisterPassword.Text = "";
+            }
+            else if (txtRegisterPassword.Text.Length < 6 || txtRegisterPassword.Text.Length > 19)
+            {
+                MessageBox.Show("Password must be between 6 - 19 characters!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtRegisterName.Text = "";
+                txtRegisterPassword.Text = "";
+            }
+            else if (userController.DoesUsernameExist(txtRegisterName.Text))
+            {
+                MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 txtRegisterName.Text = "";
                 txtRegisterPassword.Text = "";
             }
             else
             {
-                if (userController.DoesUsernameExist(txtRegisterName.Text))
-                {
-                    MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtRegisterName.Text = "";
-                    txtRegisterPassword.Text = "";
-                }
-                else
-                {
-                    User user = new User();
-                    user.Username = txtRegisterName.Text;
-                    user.Password = txtRegisterPassword.Text;
-                    user.Role = "User";
+                User user = new User();
+                user.Username = txtRegisterName.Text;
+                user.Password = txtRegisterPassword.Text;
+                user.Role = "User";
 
-                    userController.RegisterUser(user);
+                userController.RegisterUser(user);
 
-                    Hide();
-                    Login login = new Login();
-                    login.Show();
-                }
+                Hide();
+                Login login = new Login();
+                login.Show();
             }
         }
 

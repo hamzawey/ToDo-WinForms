@@ -18,6 +18,7 @@ namespace ToDoApp_Project.Model
         public ToDo()
         {
             this.Tasks = new HashSet<Task>();
+            this.SharedToDoes = new HashSet<SharedToDo>();
         }
     
         public int Id { get; set; }
@@ -31,5 +32,7 @@ namespace ToDoApp_Project.Model
         public virtual Task Task { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Tasks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SharedToDo> SharedToDoes { get; set; }
     }
 }

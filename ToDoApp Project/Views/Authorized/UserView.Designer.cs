@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserView));
             this.lblUserHeader = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnToDos = new System.Windows.Forms.Button();
@@ -36,11 +37,11 @@
             // lblUserHeader
             // 
             this.lblUserHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lblUserHeader.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserHeader.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lblUserHeader.Location = new System.Drawing.Point(12, 65);
+            this.lblUserHeader.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserHeader.ForeColor = System.Drawing.Color.White;
+            this.lblUserHeader.Location = new System.Drawing.Point(1, 54);
             this.lblUserHeader.Name = "lblUserHeader";
-            this.lblUserHeader.Size = new System.Drawing.Size(610, 59);
+            this.lblUserHeader.Size = new System.Drawing.Size(632, 78);
             this.lblUserHeader.TabIndex = 7;
             this.lblUserHeader.Text = "WELCOME!";
             this.lblUserHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,7 +50,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.MediumBlue;
+            this.btnExit.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnExit.Location = new System.Drawing.Point(252, 328);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(130, 55);
@@ -62,7 +63,7 @@
             // 
             this.btnToDos.BackColor = System.Drawing.Color.White;
             this.btnToDos.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToDos.ForeColor = System.Drawing.Color.MediumBlue;
+            this.btnToDos.ForeColor = System.Drawing.Color.ForestGreen;
             this.btnToDos.Location = new System.Drawing.Point(252, 206);
             this.btnToDos.Name = "btnToDos";
             this.btnToDos.Size = new System.Drawing.Size(130, 55);
@@ -76,11 +77,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.img4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 461);
             this.Controls.Add(this.lblUserHeader);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnToDos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserView";
             this.Text = "ToDo App - Home";
             this.Load += new System.EventHandler(this.UserView_Load);

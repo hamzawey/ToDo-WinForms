@@ -28,6 +28,17 @@ namespace ToDoApp_Project.Controller
             _dbContext.SaveChanges();
         }
 
+        public List<string> GetAllButNoCurrent(int currentUserId)
+        {
+            List<User> users = _dbContext.Users.Where(user => user.Id != currentUserId).ToList();
+            List<string> usernames = new List<string>();
+            foreach (var user in users)
+            {
+                usernames.Add(user.Username);
+            }
+            return usernames;
+        }
+
         public bool TryToLogin(User loginUser)
         {
             foreach (var user in GetAllUsers())
@@ -75,11 +86,26 @@ namespace ToDoApp_Project.Controller
 
         public void DeleteUserById(int idToDelete)
         {
-            var userToDelete = _dbContext.Users.Where(u => u.Id == idToDelete).FirstOrDefault();
+            var userToDelete = _dbContext.Users
+                .Where(u => u.Id == idToDelete)
+                .FirstOrDefault();
 
             if (userToDelete != null)
             {
-                List<Task> userToDeleteTasks = _dbContext.Tasks.Where(task => task.CreatorId == userToDelete.Id).ToList();
+                List<SharedToDo> sharedToDosToDelete = _dbContext.SharedToDoes
+                    .Where(sharedToDo => sharedToDo.SharedTo == userToDelete.Username).ToList();
+
+                if (sharedToDosToDelete.Count > 0)
+                {
+                    foreach (var sharedToDo in sharedToDosToDelete)
+                    {
+                        _dbContext.SharedToDoes.Remove(sharedToDo);
+                    }
+                }
+
+                List<Task> userToDeleteTasks = _dbContext.Tasks
+                    .Where(task => task.CreatorId == userToDelete.Id)
+                    .ToList();
 
                 if (userToDeleteTasks.Count > 0)
                 {
@@ -89,7 +115,9 @@ namespace ToDoApp_Project.Controller
                     }
                 }
 
-                List<ToDo> userToDeleteToDos = _dbContext.ToDoes.Where(todo => todo.CreatorId == userToDelete.Id).ToList();
+                List<ToDo> userToDeleteToDos = _dbContext.ToDoes
+                    .Where(todo => todo.CreatorId == userToDelete.Id)
+                    .ToList();
 
                 if (userToDeleteToDos.Count > 0)
                 {

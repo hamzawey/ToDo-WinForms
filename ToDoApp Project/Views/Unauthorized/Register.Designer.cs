@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.btnRegisterUser = new System.Windows.Forms.Button();
             this.txtRegisterName = new System.Windows.Forms.TextBox();
             this.txtRegisterPassword = new System.Windows.Forms.TextBox();
@@ -41,8 +42,9 @@
             // btnRegisterUser
             // 
             this.btnRegisterUser.BackColor = System.Drawing.Color.White;
+            this.btnRegisterUser.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnRegisterUser.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterUser.ForeColor = System.Drawing.Color.Black;
+            this.btnRegisterUser.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnRegisterUser.Location = new System.Drawing.Point(224, 240);
             this.btnRegisterUser.Name = "btnRegisterUser";
             this.btnRegisterUser.Size = new System.Drawing.Size(139, 47);
@@ -69,33 +71,35 @@
             // lblRegisterPassword
             // 
             this.lblRegisterPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegisterPassword.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterPassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisterPassword.ForeColor = System.Drawing.Color.White;
             this.lblRegisterPassword.Location = new System.Drawing.Point(373, 111);
             this.lblRegisterPassword.Name = "lblRegisterPassword";
             this.lblRegisterPassword.Size = new System.Drawing.Size(150, 23);
             this.lblRegisterPassword.TabIndex = 8;
             this.lblRegisterPassword.Text = "PASSWORD";
+            this.lblRegisterPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRegisterName
             // 
             this.lblRegisterName.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegisterName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterName.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisterName.ForeColor = System.Drawing.Color.White;
-            this.lblRegisterName.Location = new System.Drawing.Point(85, 110);
+            this.lblRegisterName.Location = new System.Drawing.Point(89, 111);
             this.lblRegisterName.Name = "lblRegisterName";
             this.lblRegisterName.Size = new System.Drawing.Size(84, 23);
             this.lblRegisterName.TabIndex = 7;
             this.lblRegisterName.Text = "NAME";
+            this.lblRegisterName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRegisterHeader
             // 
             this.lblRegisterHeader.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegisterHeader.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterHeader.Font = new System.Drawing.Font("Franklin Gothic Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisterHeader.ForeColor = System.Drawing.Color.White;
-            this.lblRegisterHeader.Location = new System.Drawing.Point(12, 24);
+            this.lblRegisterHeader.Location = new System.Drawing.Point(-1, 9);
             this.lblRegisterHeader.Name = "lblRegisterHeader";
-            this.lblRegisterHeader.Size = new System.Drawing.Size(560, 49);
+            this.lblRegisterHeader.Size = new System.Drawing.Size(584, 64);
             this.lblRegisterHeader.TabIndex = 6;
             this.lblRegisterHeader.Text = "REGISTER";
             this.lblRegisterHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,8 +107,9 @@
             // btnGoBack
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.White;
+            this.btnGoBack.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoBack.ForeColor = System.Drawing.Color.Black;
+            this.btnGoBack.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnGoBack.Location = new System.Drawing.Point(456, 312);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(116, 37);
@@ -132,6 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.img1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.checkTogglePassword);
@@ -142,6 +148,7 @@
             this.Controls.Add(this.lblRegisterPassword);
             this.Controls.Add(this.lblRegisterName);
             this.Controls.Add(this.lblRegisterHeader);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Register";
             this.Text = "Register";
             this.ResumeLayout(false);
