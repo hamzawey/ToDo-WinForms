@@ -1,6 +1,6 @@
 ﻿namespace ToDoApp_Project.View
 {
-    partial class AdminView
+    partial class AdminMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMain));
             this.btnToDos = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblAdminHeader = new System.Windows.Forms.Label();

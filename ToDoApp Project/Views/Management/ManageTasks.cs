@@ -45,13 +45,13 @@ namespace ToDoApp_Project.View
             if (Login.currentUserRole == "Admin")
             {
                 Hide();
-                AdminView view = new AdminView();
+                AdminMain view = new AdminMain();
                 view.Show();
             }
             else
             {
                 Hide();
-                UserView view = new UserView();
+                UserMain view = new UserMain();
                 view.Show();
             }
         }
@@ -112,13 +112,14 @@ namespace ToDoApp_Project.View
             }
             else
             {
-                string fixedTitle = txtEditTaskTitle.Text.Replace(" ", string.Empty);
+                string fixedTitle = txtEditTaskTitle.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
+                string fixedDescription = txtEditTaskDescription.Text.TrimStart(' ');
 
                 if (txtEditTaskIsComplete.Text.ToLower() == "true")
                 {
                     todoController.UpdateTask(int.Parse(txtEditTaskId.Text),
                         fixedTitle,
-                        txtEditTaskDescription.Text, 
+                        fixedDescription, 
                         true);
 
                     ClearEditTextBoxes();
@@ -128,7 +129,7 @@ namespace ToDoApp_Project.View
                 {
                     todoController.UpdateTask(int.Parse(txtEditTaskId.Text),
                         fixedTitle,
-                        txtEditTaskDescription.Text, 
+                        fixedDescription, 
                         false);
 
                     ClearEditTextBoxes();
@@ -235,8 +236,8 @@ namespace ToDoApp_Project.View
             {
                 Model.Task task = new Model.Task();
 
-                string fixedTitle = txtCreateTaskTitle.Text.Replace(" ", string.Empty);
-                string fixedDescription = txtCreateTaskDescription.Text.Replace(" ", string.Empty);
+                string fixedTitle = txtCreateTaskTitle.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
+                string fixedDescription = txtCreateTaskDescription.Text.TrimStart(' ');
 
                 task.Id = int.Parse(txtCreateTaskId.Text);
                 task.Title = fixedTitle;

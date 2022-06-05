@@ -97,7 +97,7 @@
             this.dgvTasks.Name = "dgvTasks";
             this.dgvTasks.ReadOnly = true;
             this.dgvTasks.RowHeadersVisible = false;
-            this.dgvTasks.Size = new System.Drawing.Size(682, 696);
+            this.dgvTasks.Size = new System.Drawing.Size(682, 575);
             this.dgvTasks.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -170,11 +170,11 @@
             // btnGoBack
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.White;
-            this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnGoBack.Location = new System.Drawing.Point(1442, 694);
+            this.btnGoBack.Location = new System.Drawing.Point(1251, 583);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(130, 55);
+            this.btnGoBack.Size = new System.Drawing.Size(110, 45);
             this.btnGoBack.TabIndex = 13;
             this.btnGoBack.Text = "GO BACK";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             // lblToDoNameForTasks
             // 
             this.lblToDoNameForTasks.BackColor = System.Drawing.Color.Transparent;
-            this.lblToDoNameForTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToDoNameForTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblToDoNameForTasks.ForeColor = System.Drawing.Color.White;
             this.lblToDoNameForTasks.Location = new System.Drawing.Point(12, 9);
             this.lblToDoNameForTasks.Name = "lblToDoNameForTasks";
@@ -195,11 +195,11 @@
             // lblCompleteTask
             // 
             this.lblCompleteTask.BackColor = System.Drawing.Color.Transparent;
-            this.lblCompleteTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompleteTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompleteTask.ForeColor = System.Drawing.Color.White;
             this.lblCompleteTask.Location = new System.Drawing.Point(700, 24);
             this.lblCompleteTask.Name = "lblCompleteTask";
-            this.lblCompleteTask.Size = new System.Drawing.Size(872, 68);
+            this.lblCompleteTask.Size = new System.Drawing.Size(631, 37);
             this.lblCompleteTask.TabIndex = 34;
             this.lblCompleteTask.Text = "To complete or remove from complete a task you have to select it from the table a" +
     "nd click the button";
@@ -208,11 +208,11 @@
             // btnToggleComplete
             // 
             this.btnToggleComplete.BackColor = System.Drawing.Color.White;
-            this.btnToggleComplete.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToggleComplete.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToggleComplete.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnToggleComplete.Location = new System.Drawing.Point(1073, 107);
+            this.btnToggleComplete.Location = new System.Drawing.Point(961, 64);
             this.btnToggleComplete.Name = "btnToggleComplete";
-            this.btnToggleComplete.Size = new System.Drawing.Size(130, 59);
+            this.btnToggleComplete.Size = new System.Drawing.Size(110, 45);
             this.btnToggleComplete.TabIndex = 33;
             this.btnToggleComplete.Text = "COMPLETE UNCOMPLETE";
             this.btnToggleComplete.UseVisualStyleBackColor = false;
@@ -221,11 +221,11 @@
             // btnDeleteByIdTask
             // 
             this.btnDeleteByIdTask.BackColor = System.Drawing.Color.White;
-            this.btnDeleteByIdTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteByIdTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteByIdTask.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnDeleteByIdTask.Location = new System.Drawing.Point(1073, 261);
+            this.btnDeleteByIdTask.Location = new System.Drawing.Point(961, 191);
             this.btnDeleteByIdTask.Name = "btnDeleteByIdTask";
-            this.btnDeleteByIdTask.Size = new System.Drawing.Size(130, 59);
+            this.btnDeleteByIdTask.Size = new System.Drawing.Size(110, 45);
             this.btnDeleteByIdTask.TabIndex = 35;
             this.btnDeleteByIdTask.Text = "DELETE BY ID";
             this.btnDeleteByIdTask.UseVisualStyleBackColor = false;
@@ -234,18 +234,18 @@
             // lblTaskDeleteById
             // 
             this.lblTaskDeleteById.BackColor = System.Drawing.Color.Transparent;
-            this.lblTaskDeleteById.Font = new System.Drawing.Font("Franklin Gothic Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaskDeleteById.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTaskDeleteById.ForeColor = System.Drawing.Color.White;
-            this.lblTaskDeleteById.Location = new System.Drawing.Point(706, 190);
+            this.lblTaskDeleteById.Location = new System.Drawing.Point(706, 122);
             this.lblTaskDeleteById.Name = "lblTaskDeleteById";
-            this.lblTaskDeleteById.Size = new System.Drawing.Size(866, 31);
+            this.lblTaskDeleteById.Size = new System.Drawing.Size(625, 31);
             this.lblTaskDeleteById.TabIndex = 38;
             this.lblTaskDeleteById.Text = "PROVIDE AN ID IN THE BOX BELOW";
             this.lblTaskDeleteById.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTaskDeleteById
             // 
-            this.txtTaskDeleteById.Location = new System.Drawing.Point(1110, 235);
+            this.txtTaskDeleteById.Location = new System.Drawing.Point(983, 156);
             this.txtTaskDeleteById.Name = "txtTaskDeleteById";
             this.txtTaskDeleteById.Size = new System.Drawing.Size(57, 20);
             this.txtTaskDeleteById.TabIndex = 36;
@@ -255,17 +255,17 @@
             // 
             this.lblCreateTitle.AutoSize = true;
             this.lblCreateTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateTitle.ForeColor = System.Drawing.Color.White;
-            this.lblCreateTitle.Location = new System.Drawing.Point(985, 386);
+            this.lblCreateTitle.Location = new System.Drawing.Point(863, 303);
             this.lblCreateTitle.Name = "lblCreateTitle";
-            this.lblCreateTitle.Size = new System.Drawing.Size(66, 24);
+            this.lblCreateTitle.Size = new System.Drawing.Size(41, 17);
             this.lblCreateTitle.TabIndex = 44;
             this.lblCreateTitle.Text = "TITLE";
             // 
             // txtCreateTaskTitle
             // 
-            this.txtCreateTaskTitle.Location = new System.Drawing.Point(961, 421);
+            this.txtCreateTaskTitle.Location = new System.Drawing.Point(839, 338);
             this.txtCreateTaskTitle.Name = "txtCreateTaskTitle";
             this.txtCreateTaskTitle.Size = new System.Drawing.Size(117, 20);
             this.txtCreateTaskTitle.TabIndex = 43;
@@ -275,17 +275,17 @@
             // 
             this.lblCreateId.AutoSize = true;
             this.lblCreateId.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateId.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateId.ForeColor = System.Drawing.Color.White;
-            this.lblCreateId.Location = new System.Drawing.Point(906, 386);
+            this.lblCreateId.Location = new System.Drawing.Point(784, 303);
             this.lblCreateId.Name = "lblCreateId";
-            this.lblCreateId.Size = new System.Drawing.Size(29, 24);
+            this.lblCreateId.Size = new System.Drawing.Size(22, 17);
             this.lblCreateId.TabIndex = 42;
             this.lblCreateId.Text = "ID";
             // 
             // txtCreateTaskId
             // 
-            this.txtCreateTaskId.Location = new System.Drawing.Point(900, 421);
+            this.txtCreateTaskId.Location = new System.Drawing.Point(778, 338);
             this.txtCreateTaskId.Name = "txtCreateTaskId";
             this.txtCreateTaskId.Size = new System.Drawing.Size(46, 20);
             this.txtCreateTaskId.TabIndex = 41;
@@ -294,11 +294,11 @@
             // lblCreateTask
             // 
             this.lblCreateTask.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateTask.ForeColor = System.Drawing.Color.White;
-            this.lblCreateTask.Location = new System.Drawing.Point(711, 336);
+            this.lblCreateTask.Location = new System.Drawing.Point(703, 260);
             this.lblCreateTask.Name = "lblCreateTask";
-            this.lblCreateTask.Size = new System.Drawing.Size(861, 27);
+            this.lblCreateTask.Size = new System.Drawing.Size(628, 27);
             this.lblCreateTask.TabIndex = 40;
             this.lblCreateTask.Text = "To create a Task please provide Id, Title, Description and ToDo Id";
             this.lblCreateTask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,11 +306,11 @@
             // btnCreateTask
             // 
             this.btnCreateTask.BackColor = System.Drawing.Color.White;
-            this.btnCreateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateTask.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnCreateTask.Location = new System.Drawing.Point(1073, 461);
+            this.btnCreateTask.Location = new System.Drawing.Point(961, 375);
             this.btnCreateTask.Name = "btnCreateTask";
-            this.btnCreateTask.Size = new System.Drawing.Size(130, 55);
+            this.btnCreateTask.Size = new System.Drawing.Size(110, 45);
             this.btnCreateTask.TabIndex = 39;
             this.btnCreateTask.Text = "CREATE";
             this.btnCreateTask.UseVisualStyleBackColor = false;
@@ -320,17 +320,17 @@
             // 
             this.lblCreateToDoId.AutoSize = true;
             this.lblCreateToDoId.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateToDoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateToDoId.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateToDoId.ForeColor = System.Drawing.Color.White;
-            this.lblCreateToDoId.Location = new System.Drawing.Point(1278, 386);
+            this.lblCreateToDoId.Location = new System.Drawing.Point(1176, 303);
             this.lblCreateToDoId.Name = "lblCreateToDoId";
-            this.lblCreateToDoId.Size = new System.Drawing.Size(94, 24);
+            this.lblCreateToDoId.Size = new System.Drawing.Size(61, 17);
             this.lblCreateToDoId.TabIndex = 48;
             this.lblCreateToDoId.Text = "TODO ID";
             // 
             // txtCreateTaskToDoId
             // 
-            this.txtCreateTaskToDoId.Location = new System.Drawing.Point(1269, 421);
+            this.txtCreateTaskToDoId.Location = new System.Drawing.Point(1147, 338);
             this.txtCreateTaskToDoId.Name = "txtCreateTaskToDoId";
             this.txtCreateTaskToDoId.Size = new System.Drawing.Size(117, 20);
             this.txtCreateTaskToDoId.TabIndex = 47;
@@ -340,17 +340,17 @@
             // 
             this.lblCreateDescription.AutoSize = true;
             this.lblCreateDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateDescription.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateDescription.ForeColor = System.Drawing.Color.White;
-            this.lblCreateDescription.Location = new System.Drawing.Point(1102, 386);
+            this.lblCreateDescription.Location = new System.Drawing.Point(980, 303);
             this.lblCreateDescription.Name = "lblCreateDescription";
-            this.lblCreateDescription.Size = new System.Drawing.Size(146, 24);
+            this.lblCreateDescription.Size = new System.Drawing.Size(94, 17);
             this.lblCreateDescription.TabIndex = 46;
             this.lblCreateDescription.Text = "DESCRIPTION";
             // 
             // txtCreateTaskDescription
             // 
-            this.txtCreateTaskDescription.Location = new System.Drawing.Point(1094, 421);
+            this.txtCreateTaskDescription.Location = new System.Drawing.Point(972, 338);
             this.txtCreateTaskDescription.Name = "txtCreateTaskDescription";
             this.txtCreateTaskDescription.Size = new System.Drawing.Size(154, 20);
             this.txtCreateTaskDescription.TabIndex = 45;
@@ -359,9 +359,9 @@
             // lblEditTaskIsComplete
             // 
             this.lblEditTaskIsComplete.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditTaskIsComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditTaskIsComplete.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTaskIsComplete.ForeColor = System.Drawing.Color.White;
-            this.lblEditTaskIsComplete.Location = new System.Drawing.Point(1264, 594);
+            this.lblEditTaskIsComplete.Location = new System.Drawing.Point(1138, 477);
             this.lblEditTaskIsComplete.Name = "lblEditTaskIsComplete";
             this.lblEditTaskIsComplete.Size = new System.Drawing.Size(155, 24);
             this.lblEditTaskIsComplete.TabIndex = 58;
@@ -370,7 +370,7 @@
             // 
             // txtEditTaskIsComplete
             // 
-            this.txtEditTaskIsComplete.Location = new System.Drawing.Point(1264, 629);
+            this.txtEditTaskIsComplete.Location = new System.Drawing.Point(1138, 512);
             this.txtEditTaskIsComplete.Name = "txtEditTaskIsComplete";
             this.txtEditTaskIsComplete.Size = new System.Drawing.Size(155, 20);
             this.txtEditTaskIsComplete.TabIndex = 57;
@@ -380,17 +380,17 @@
             // 
             this.lblEditTaskDescription.AutoSize = true;
             this.lblEditTaskDescription.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditTaskDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditTaskDescription.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTaskDescription.ForeColor = System.Drawing.Color.White;
-            this.lblEditTaskDescription.Location = new System.Drawing.Point(1097, 594);
+            this.lblEditTaskDescription.Location = new System.Drawing.Point(971, 477);
             this.lblEditTaskDescription.Name = "lblEditTaskDescription";
-            this.lblEditTaskDescription.Size = new System.Drawing.Size(146, 24);
+            this.lblEditTaskDescription.Size = new System.Drawing.Size(94, 17);
             this.lblEditTaskDescription.TabIndex = 56;
             this.lblEditTaskDescription.Text = "DESCRIPTION";
             // 
             // txtEditTaskDescription
             // 
-            this.txtEditTaskDescription.Location = new System.Drawing.Point(1089, 629);
+            this.txtEditTaskDescription.Location = new System.Drawing.Point(963, 512);
             this.txtEditTaskDescription.Name = "txtEditTaskDescription";
             this.txtEditTaskDescription.Size = new System.Drawing.Size(154, 20);
             this.txtEditTaskDescription.TabIndex = 55;
@@ -400,17 +400,17 @@
             // 
             this.lblEditTaskTitle.AutoSize = true;
             this.lblEditTaskTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditTaskTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditTaskTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTaskTitle.ForeColor = System.Drawing.Color.White;
-            this.lblEditTaskTitle.Location = new System.Drawing.Point(980, 594);
+            this.lblEditTaskTitle.Location = new System.Drawing.Point(854, 477);
             this.lblEditTaskTitle.Name = "lblEditTaskTitle";
-            this.lblEditTaskTitle.Size = new System.Drawing.Size(66, 24);
+            this.lblEditTaskTitle.Size = new System.Drawing.Size(41, 17);
             this.lblEditTaskTitle.TabIndex = 54;
             this.lblEditTaskTitle.Text = "TITLE";
             // 
             // txtEditTaskTitle
             // 
-            this.txtEditTaskTitle.Location = new System.Drawing.Point(956, 629);
+            this.txtEditTaskTitle.Location = new System.Drawing.Point(830, 512);
             this.txtEditTaskTitle.Name = "txtEditTaskTitle";
             this.txtEditTaskTitle.Size = new System.Drawing.Size(117, 20);
             this.txtEditTaskTitle.TabIndex = 53;
@@ -420,17 +420,17 @@
             // 
             this.lblEditTaskId.AutoSize = true;
             this.lblEditTaskId.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditTaskId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditTaskId.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditTaskId.ForeColor = System.Drawing.Color.White;
-            this.lblEditTaskId.Location = new System.Drawing.Point(901, 594);
+            this.lblEditTaskId.Location = new System.Drawing.Point(775, 477);
             this.lblEditTaskId.Name = "lblEditTaskId";
-            this.lblEditTaskId.Size = new System.Drawing.Size(29, 24);
+            this.lblEditTaskId.Size = new System.Drawing.Size(22, 17);
             this.lblEditTaskId.TabIndex = 52;
             this.lblEditTaskId.Text = "ID";
             // 
             // txtEditTaskId
             // 
-            this.txtEditTaskId.Location = new System.Drawing.Point(895, 629);
+            this.txtEditTaskId.Location = new System.Drawing.Point(769, 512);
             this.txtEditTaskId.Name = "txtEditTaskId";
             this.txtEditTaskId.Size = new System.Drawing.Size(46, 20);
             this.txtEditTaskId.TabIndex = 51;
@@ -439,11 +439,11 @@
             // lblUpdateTask
             // 
             this.lblUpdateTask.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpdateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateTask.ForeColor = System.Drawing.Color.White;
-            this.lblUpdateTask.Location = new System.Drawing.Point(706, 544);
+            this.lblUpdateTask.Location = new System.Drawing.Point(700, 441);
             this.lblUpdateTask.Name = "lblUpdateTask";
-            this.lblUpdateTask.Size = new System.Drawing.Size(861, 27);
+            this.lblUpdateTask.Size = new System.Drawing.Size(631, 27);
             this.lblUpdateTask.TabIndex = 50;
             this.lblUpdateTask.Text = "To edit a Task please provide the information below";
             this.lblUpdateTask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,11 +451,11 @@
             // btnUpdateTask
             // 
             this.btnUpdateTask.BackColor = System.Drawing.Color.White;
-            this.btnUpdateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateTask.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTask.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdateTask.Location = new System.Drawing.Point(1068, 669);
+            this.btnUpdateTask.Location = new System.Drawing.Point(961, 553);
             this.btnUpdateTask.Name = "btnUpdateTask";
-            this.btnUpdateTask.Size = new System.Drawing.Size(130, 55);
+            this.btnUpdateTask.Size = new System.Drawing.Size(110, 45);
             this.btnUpdateTask.TabIndex = 49;
             this.btnUpdateTask.Text = "UPDATE";
             this.btnUpdateTask.UseVisualStyleBackColor = false;
@@ -464,9 +464,9 @@
             // lblTrueFalseText
             // 
             this.lblTrueFalseText.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrueFalseText.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrueFalseText.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrueFalseText.ForeColor = System.Drawing.Color.White;
-            this.lblTrueFalseText.Location = new System.Drawing.Point(1264, 652);
+            this.lblTrueFalseText.Location = new System.Drawing.Point(1138, 535);
             this.lblTrueFalseText.Name = "lblTrueFalseText";
             this.lblTrueFalseText.Size = new System.Drawing.Size(155, 23);
             this.lblTrueFalseText.TabIndex = 59;
@@ -480,7 +480,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.img7;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1584, 761);
+            this.ClientSize = new System.Drawing.Size(1373, 640);
             this.Controls.Add(this.lblTrueFalseText);
             this.Controls.Add(this.lblEditTaskIsComplete);
             this.Controls.Add(this.txtEditTaskIsComplete);

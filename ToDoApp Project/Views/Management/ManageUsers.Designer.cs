@@ -84,7 +84,7 @@
             this.dgvManageUsers.Name = "dgvManageUsers";
             this.dgvManageUsers.ReadOnly = true;
             this.dgvManageUsers.RowHeadersVisible = false;
-            this.dgvManageUsers.Size = new System.Drawing.Size(323, 901);
+            this.dgvManageUsers.Size = new System.Drawing.Size(323, 611);
             this.dgvManageUsers.TabIndex = 0;
             // 
             // Id
@@ -126,11 +126,11 @@
             // btnManageEdit
             // 
             this.btnManageEdit.BackColor = System.Drawing.Color.White;
-            this.btnManageEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageEdit.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnManageEdit.Location = new System.Drawing.Point(671, 790);
+            this.btnManageEdit.Location = new System.Drawing.Point(582, 573);
             this.btnManageEdit.Name = "btnManageEdit";
-            this.btnManageEdit.Size = new System.Drawing.Size(130, 55);
+            this.btnManageEdit.Size = new System.Drawing.Size(110, 48);
             this.btnManageEdit.TabIndex = 1;
             this.btnManageEdit.Text = "EDIT";
             this.btnManageEdit.UseVisualStyleBackColor = false;
@@ -139,11 +139,11 @@
             // btnManageCreate
             // 
             this.btnManageCreate.BackColor = System.Drawing.Color.White;
-            this.btnManageCreate.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCreate.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageCreate.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnManageCreate.Location = new System.Drawing.Point(672, 174);
+            this.btnManageCreate.Location = new System.Drawing.Point(582, 126);
             this.btnManageCreate.Name = "btnManageCreate";
-            this.btnManageCreate.Size = new System.Drawing.Size(130, 55);
+            this.btnManageCreate.Size = new System.Drawing.Size(110, 48);
             this.btnManageCreate.TabIndex = 2;
             this.btnManageCreate.Text = "CREATE";
             this.btnManageCreate.UseVisualStyleBackColor = false;
@@ -152,11 +152,11 @@
             // btnManageDelete
             // 
             this.btnManageDelete.BackColor = System.Drawing.Color.White;
-            this.btnManageDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageDelete.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnManageDelete.Location = new System.Drawing.Point(671, 349);
+            this.btnManageDelete.Location = new System.Drawing.Point(582, 247);
             this.btnManageDelete.Name = "btnManageDelete";
-            this.btnManageDelete.Size = new System.Drawing.Size(130, 55);
+            this.btnManageDelete.Size = new System.Drawing.Size(110, 48);
             this.btnManageDelete.TabIndex = 3;
             this.btnManageDelete.Text = "DELETE";
             this.btnManageDelete.UseVisualStyleBackColor = false;
@@ -164,28 +164,28 @@
             // 
             // txtManageCreateId
             // 
-            this.txtManageCreateId.Location = new System.Drawing.Point(513, 100);
+            this.txtManageCreateId.Location = new System.Drawing.Point(405, 67);
             this.txtManageCreateId.Name = "txtManageCreateId";
             this.txtManageCreateId.Size = new System.Drawing.Size(70, 20);
             this.txtManageCreateId.TabIndex = 4;
             // 
             // txtManageCreatePassword
             // 
-            this.txtManageCreatePassword.Location = new System.Drawing.Point(735, 100);
+            this.txtManageCreatePassword.Location = new System.Drawing.Point(627, 67);
             this.txtManageCreatePassword.Name = "txtManageCreatePassword";
             this.txtManageCreatePassword.Size = new System.Drawing.Size(140, 20);
             this.txtManageCreatePassword.TabIndex = 5;
             // 
             // txtManageCreateUsername
             // 
-            this.txtManageCreateUsername.Location = new System.Drawing.Point(589, 100);
+            this.txtManageCreateUsername.Location = new System.Drawing.Point(481, 67);
             this.txtManageCreateUsername.Name = "txtManageCreateUsername";
             this.txtManageCreateUsername.Size = new System.Drawing.Size(140, 20);
             this.txtManageCreateUsername.TabIndex = 6;
             // 
             // txtManageCreateRole
             // 
-            this.txtManageCreateRole.Location = new System.Drawing.Point(881, 100);
+            this.txtManageCreateRole.Location = new System.Drawing.Point(773, 67);
             this.txtManageCreateRole.Name = "txtManageCreateRole";
             this.txtManageCreateRole.Size = new System.Drawing.Size(81, 20);
             this.txtManageCreateRole.TabIndex = 7;
@@ -193,11 +193,11 @@
             // lblManageUsersDelete
             // 
             this.lblManageUsersDelete.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageUsersDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageUsersDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageUsersDelete.ForeColor = System.Drawing.Color.White;
-            this.lblManageUsersDelete.Location = new System.Drawing.Point(346, 268);
+            this.lblManageUsersDelete.Location = new System.Drawing.Point(354, 199);
             this.lblManageUsersDelete.Name = "lblManageUsersDelete";
-            this.lblManageUsersDelete.Size = new System.Drawing.Size(776, 67);
+            this.lblManageUsersDelete.Size = new System.Drawing.Size(565, 45);
             this.lblManageUsersDelete.TabIndex = 8;
             this.lblManageUsersDelete.Text = "SELECT USER FROM THE GRID AND CLICK DELETE TO DELETE THE IT FROM THE DATABASE";
             this.lblManageUsersDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -205,11 +205,11 @@
             // lblManageUsersCreate
             // 
             this.lblManageUsersCreate.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageUsersCreate.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageUsersCreate.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageUsersCreate.ForeColor = System.Drawing.Color.White;
             this.lblManageUsersCreate.Location = new System.Drawing.Point(351, 12);
             this.lblManageUsersCreate.Name = "lblManageUsersCreate";
-            this.lblManageUsersCreate.Size = new System.Drawing.Size(771, 64);
+            this.lblManageUsersCreate.Size = new System.Drawing.Size(568, 42);
             this.lblManageUsersCreate.TabIndex = 9;
             this.lblManageUsersCreate.Text = "TO CREATE A ACCOUNT FILL THE BOXES BELOW TO PROVIDE ENOUGH INFO";
             this.lblManageUsersCreate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,11 +217,11 @@
             // lblManageUsersEdit
             // 
             this.lblManageUsersEdit.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageUsersEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageUsersEdit.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageUsersEdit.ForeColor = System.Drawing.Color.White;
-            this.lblManageUsersEdit.Location = new System.Drawing.Point(341, 654);
+            this.lblManageUsersEdit.Location = new System.Drawing.Point(343, 441);
             this.lblManageUsersEdit.Name = "lblManageUsersEdit";
-            this.lblManageUsersEdit.Size = new System.Drawing.Size(781, 55);
+            this.lblManageUsersEdit.Size = new System.Drawing.Size(576, 47);
             this.lblManageUsersEdit.TabIndex = 10;
             this.lblManageUsersEdit.Text = "TO EDIT ACCOUNT SELECT IT FROM THE GRID AND PROVIDE INFORMATION IN THE BOXES BELO" +
     "W";
@@ -230,11 +230,11 @@
             // btnGoBack
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.White;
-            this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGoBack.Location = new System.Drawing.Point(992, 894);
+            this.btnGoBack.Location = new System.Drawing.Point(804, 614);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(130, 55);
+            this.btnGoBack.Size = new System.Drawing.Size(110, 48);
             this.btnGoBack.TabIndex = 11;
             this.btnGoBack.Text = "GO BACK";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -255,9 +255,9 @@
             // lblManageCreateId
             // 
             this.lblManageCreateId.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageCreateId.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageCreateId.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageCreateId.ForeColor = System.Drawing.Color.White;
-            this.lblManageCreateId.Location = new System.Drawing.Point(510, 133);
+            this.lblManageCreateId.Location = new System.Drawing.Point(402, 100);
             this.lblManageCreateId.Name = "lblManageCreateId";
             this.lblManageCreateId.Size = new System.Drawing.Size(73, 23);
             this.lblManageCreateId.TabIndex = 13;
@@ -267,9 +267,9 @@
             // lblManageCreateUsername
             // 
             this.lblManageCreateUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageCreateUsername.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageCreateUsername.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageCreateUsername.ForeColor = System.Drawing.Color.White;
-            this.lblManageCreateUsername.Location = new System.Drawing.Point(589, 133);
+            this.lblManageCreateUsername.Location = new System.Drawing.Point(481, 100);
             this.lblManageCreateUsername.Name = "lblManageCreateUsername";
             this.lblManageCreateUsername.Size = new System.Drawing.Size(137, 23);
             this.lblManageCreateUsername.TabIndex = 14;
@@ -279,9 +279,9 @@
             // lblManageCreatePassword
             // 
             this.lblManageCreatePassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageCreatePassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageCreatePassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageCreatePassword.ForeColor = System.Drawing.Color.White;
-            this.lblManageCreatePassword.Location = new System.Drawing.Point(732, 133);
+            this.lblManageCreatePassword.Location = new System.Drawing.Point(624, 100);
             this.lblManageCreatePassword.Name = "lblManageCreatePassword";
             this.lblManageCreatePassword.Size = new System.Drawing.Size(143, 23);
             this.lblManageCreatePassword.TabIndex = 15;
@@ -291,9 +291,9 @@
             // lblManageCreateRole
             // 
             this.lblManageCreateRole.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageCreateRole.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageCreateRole.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageCreateRole.ForeColor = System.Drawing.Color.White;
-            this.lblManageCreateRole.Location = new System.Drawing.Point(881, 133);
+            this.lblManageCreateRole.Location = new System.Drawing.Point(773, 100);
             this.lblManageCreateRole.Name = "lblManageCreateRole";
             this.lblManageCreateRole.Size = new System.Drawing.Size(80, 23);
             this.lblManageCreateRole.TabIndex = 16;
@@ -303,9 +303,9 @@
             // lblManageEditRole
             // 
             this.lblManageEditRole.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageEditRole.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageEditRole.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageEditRole.ForeColor = System.Drawing.Color.White;
-            this.lblManageEditRole.Location = new System.Drawing.Point(839, 745);
+            this.lblManageEditRole.Location = new System.Drawing.Point(751, 534);
             this.lblManageEditRole.Name = "lblManageEditRole";
             this.lblManageEditRole.Size = new System.Drawing.Size(80, 23);
             this.lblManageEditRole.TabIndex = 24;
@@ -315,9 +315,9 @@
             // lblManageEditPassword
             // 
             this.lblManageEditPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageEditPassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageEditPassword.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageEditPassword.ForeColor = System.Drawing.Color.White;
-            this.lblManageEditPassword.Location = new System.Drawing.Point(690, 745);
+            this.lblManageEditPassword.Location = new System.Drawing.Point(602, 534);
             this.lblManageEditPassword.Name = "lblManageEditPassword";
             this.lblManageEditPassword.Size = new System.Drawing.Size(143, 23);
             this.lblManageEditPassword.TabIndex = 23;
@@ -327,9 +327,9 @@
             // lblManageEditUsername
             // 
             this.lblManageEditUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageEditUsername.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageEditUsername.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageEditUsername.ForeColor = System.Drawing.Color.White;
-            this.lblManageEditUsername.Location = new System.Drawing.Point(547, 745);
+            this.lblManageEditUsername.Location = new System.Drawing.Point(459, 534);
             this.lblManageEditUsername.Name = "lblManageEditUsername";
             this.lblManageEditUsername.Size = new System.Drawing.Size(137, 23);
             this.lblManageEditUsername.TabIndex = 22;
@@ -338,28 +338,28 @@
             // 
             // txtManageEditRole
             // 
-            this.txtManageEditRole.Location = new System.Drawing.Point(839, 712);
+            this.txtManageEditRole.Location = new System.Drawing.Point(751, 501);
             this.txtManageEditRole.Name = "txtManageEditRole";
             this.txtManageEditRole.Size = new System.Drawing.Size(80, 20);
             this.txtManageEditRole.TabIndex = 20;
             // 
             // txtManageEditUsername
             // 
-            this.txtManageEditUsername.Location = new System.Drawing.Point(547, 712);
+            this.txtManageEditUsername.Location = new System.Drawing.Point(459, 501);
             this.txtManageEditUsername.Name = "txtManageEditUsername";
             this.txtManageEditUsername.Size = new System.Drawing.Size(140, 20);
             this.txtManageEditUsername.TabIndex = 19;
             // 
             // txtManageEditPassword
             // 
-            this.txtManageEditPassword.Location = new System.Drawing.Point(693, 712);
+            this.txtManageEditPassword.Location = new System.Drawing.Point(605, 501);
             this.txtManageEditPassword.Name = "txtManageEditPassword";
             this.txtManageEditPassword.Size = new System.Drawing.Size(140, 20);
             this.txtManageEditPassword.TabIndex = 18;
             // 
             // txtManageDeleteById
             // 
-            this.txtManageDeleteById.Location = new System.Drawing.Point(705, 506);
+            this.txtManageDeleteById.Location = new System.Drawing.Point(605, 339);
             this.txtManageDeleteById.Name = "txtManageDeleteById";
             this.txtManageDeleteById.Size = new System.Drawing.Size(60, 20);
             this.txtManageDeleteById.TabIndex = 25;
@@ -368,11 +368,11 @@
             // lblManageUsersDeleteById
             // 
             this.lblManageUsersDeleteById.BackColor = System.Drawing.Color.Transparent;
-            this.lblManageUsersDeleteById.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageUsersDeleteById.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManageUsersDeleteById.ForeColor = System.Drawing.Color.White;
-            this.lblManageUsersDeleteById.Location = new System.Drawing.Point(341, 463);
+            this.lblManageUsersDeleteById.Location = new System.Drawing.Point(343, 308);
             this.lblManageUsersDeleteById.Name = "lblManageUsersDeleteById";
-            this.lblManageUsersDeleteById.Size = new System.Drawing.Size(779, 31);
+            this.lblManageUsersDeleteById.Size = new System.Drawing.Size(576, 28);
             this.lblManageUsersDeleteById.TabIndex = 28;
             this.lblManageUsersDeleteById.Text = "PROVIDE AN ID IN THE BOX BELOW";
             this.lblManageUsersDeleteById.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -380,11 +380,11 @@
             // btnManageDeleteById
             // 
             this.btnManageDeleteById.BackColor = System.Drawing.Color.White;
-            this.btnManageDeleteById.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageDeleteById.Font = new System.Drawing.Font("Franklin Gothic Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageDeleteById.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnManageDeleteById.Location = new System.Drawing.Point(671, 544);
+            this.btnManageDeleteById.Location = new System.Drawing.Point(582, 375);
             this.btnManageDeleteById.Name = "btnManageDeleteById";
-            this.btnManageDeleteById.Size = new System.Drawing.Size(130, 55);
+            this.btnManageDeleteById.Size = new System.Drawing.Size(110, 48);
             this.btnManageDeleteById.TabIndex = 27;
             this.btnManageDeleteById.Text = "DELETE BY ID";
             this.btnManageDeleteById.UseVisualStyleBackColor = false;
@@ -397,7 +397,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1130, 959);
+            this.ClientSize = new System.Drawing.Size(926, 671);
             this.Controls.Add(this.lblManageUsersDeleteById);
             this.Controls.Add(this.btnManageDeleteById);
             this.Controls.Add(this.txtManageDeleteById);

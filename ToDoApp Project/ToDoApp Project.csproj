@@ -109,11 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Authorized\AdminView.cs">
+    <Compile Include="Views\Authorized\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Authorized\AdminView.Designer.cs">
-      <DependentUpon>AdminView.cs</DependentUpon>
+    <Compile Include="Views\Authorized\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Unauthorized\Login.cs">
       <SubType>Form</SubType>
@@ -147,11 +147,11 @@
     <Compile Include="Views\Management\ManageTasks.Designer.cs">
       <DependentUpon>ManageTasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Authorized\UserView.cs">
+    <Compile Include="Views\Authorized\UserMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Authorized\UserView.Designer.cs">
-      <DependentUpon>UserView.cs</DependentUpon>
+    <Compile Include="Views\Authorized\UserMain.Designer.cs">
+      <DependentUpon>UserMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Management\ManageUsers.cs">
       <SubType>Form</SubType>
@@ -159,8 +159,8 @@
     <Compile Include="Views\Management\ManageUsers.Designer.cs">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Authorized\AdminView.resx">
-      <DependentUpon>AdminView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Authorized\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Unauthorized\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="Views\Management\ManageTasks.resx">
       <DependentUpon>ManageTasks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Authorized\UserView.resx">
-      <DependentUpon>UserView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Authorized\UserMain.resx">
+      <DependentUpon>UserMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Management\ManageUsers.resx">
       <DependentUpon>ManageUsers.cs</DependentUpon>

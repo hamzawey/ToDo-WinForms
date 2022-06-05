@@ -86,7 +86,7 @@
             this.dgvManageToDos.Name = "dgvManageToDos";
             this.dgvManageToDos.ReadOnly = true;
             this.dgvManageToDos.RowHeadersVisible = false;
-            this.dgvManageToDos.Size = new System.Drawing.Size(544, 937);
+            this.dgvManageToDos.Size = new System.Drawing.Size(544, 827);
             this.dgvManageToDos.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -144,11 +144,11 @@
             // btnGoBack
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.White;
-            this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnGoBack.Location = new System.Drawing.Point(1227, 894);
+            this.btnGoBack.Location = new System.Drawing.Point(957, 813);
             this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(130, 55);
+            this.btnGoBack.Size = new System.Drawing.Size(110, 45);
             this.btnGoBack.TabIndex = 12;
             this.btnGoBack.Text = "GO BACK";
             this.btnGoBack.UseVisualStyleBackColor = false;
@@ -157,11 +157,11 @@
             // btnDeleteByIdToDo
             // 
             this.btnDeleteByIdToDo.BackColor = System.Drawing.Color.White;
-            this.btnDeleteByIdToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteByIdToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteByIdToDo.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnDeleteByIdToDo.Location = new System.Drawing.Point(890, 268);
+            this.btnDeleteByIdToDo.Location = new System.Drawing.Point(753, 271);
             this.btnDeleteByIdToDo.Name = "btnDeleteByIdToDo";
-            this.btnDeleteByIdToDo.Size = new System.Drawing.Size(130, 55);
+            this.btnDeleteByIdToDo.Size = new System.Drawing.Size(110, 45);
             this.btnDeleteByIdToDo.TabIndex = 13;
             this.btnDeleteByIdToDo.Text = "DELETE BY ID";
             this.btnDeleteByIdToDo.UseVisualStyleBackColor = false;
@@ -170,11 +170,11 @@
             // lblDeleteByIdToDo
             // 
             this.lblDeleteByIdToDo.BackColor = System.Drawing.Color.Transparent;
-            this.lblDeleteByIdToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeleteByIdToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteByIdToDo.ForeColor = System.Drawing.Color.White;
             this.lblDeleteByIdToDo.Location = new System.Drawing.Point(570, 204);
             this.lblDeleteByIdToDo.Name = "lblDeleteByIdToDo";
-            this.lblDeleteByIdToDo.Size = new System.Drawing.Size(785, 27);
+            this.lblDeleteByIdToDo.Size = new System.Drawing.Size(480, 27);
             this.lblDeleteByIdToDo.TabIndex = 14;
             this.lblDeleteByIdToDo.Text = "To delete a ToDo, please provide Id and click DELETE BY ID";
             this.lblDeleteByIdToDo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,11 +182,11 @@
             // lblCreateToDo
             // 
             this.lblCreateToDo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateToDo.ForeColor = System.Drawing.Color.White;
-            this.lblCreateToDo.Location = new System.Drawing.Point(580, 12);
+            this.lblCreateToDo.Location = new System.Drawing.Point(573, 12);
             this.lblCreateToDo.Name = "lblCreateToDo";
-            this.lblCreateToDo.Size = new System.Drawing.Size(775, 27);
+            this.lblCreateToDo.Size = new System.Drawing.Size(477, 27);
             this.lblCreateToDo.TabIndex = 16;
             this.lblCreateToDo.Text = "To create a ToDo, please provide Id and Title";
             this.lblCreateToDo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,11 +194,11 @@
             // btnCreateToDo
             // 
             this.btnCreateToDo.BackColor = System.Drawing.Color.White;
-            this.btnCreateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateToDo.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnCreateToDo.Location = new System.Drawing.Point(890, 124);
+            this.btnCreateToDo.Location = new System.Drawing.Point(753, 100);
             this.btnCreateToDo.Name = "btnCreateToDo";
-            this.btnCreateToDo.Size = new System.Drawing.Size(130, 55);
+            this.btnCreateToDo.Size = new System.Drawing.Size(110, 45);
             this.btnCreateToDo.TabIndex = 15;
             this.btnCreateToDo.Text = "CREATE";
             this.btnCreateToDo.UseVisualStyleBackColor = false;
@@ -207,11 +207,11 @@
             // lblEditToDo
             // 
             this.lblEditToDo.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditToDo.ForeColor = System.Drawing.Color.White;
             this.lblEditToDo.Location = new System.Drawing.Point(575, 348);
             this.lblEditToDo.Name = "lblEditToDo";
-            this.lblEditToDo.Size = new System.Drawing.Size(780, 27);
+            this.lblEditToDo.Size = new System.Drawing.Size(475, 27);
             this.lblEditToDo.TabIndex = 20;
             this.lblEditToDo.Text = "To edit a ToDo, please provide Id and Title and click UPDATE";
             this.lblEditToDo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,11 +219,11 @@
             // btnUpdateToDo
             // 
             this.btnUpdateToDo.BackColor = System.Drawing.Color.White;
-            this.btnUpdateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateToDo.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnUpdateToDo.Location = new System.Drawing.Point(890, 470);
+            this.btnUpdateToDo.Location = new System.Drawing.Point(753, 462);
             this.btnUpdateToDo.Name = "btnUpdateToDo";
-            this.btnUpdateToDo.Size = new System.Drawing.Size(130, 55);
+            this.btnUpdateToDo.Size = new System.Drawing.Size(110, 45);
             this.btnUpdateToDo.TabIndex = 19;
             this.btnUpdateToDo.Text = "UPDATE";
             this.btnUpdateToDo.UseVisualStyleBackColor = false;
@@ -231,7 +231,7 @@
             // 
             // txtCreateToDoId
             // 
-            this.txtCreateToDoId.Location = new System.Drawing.Point(822, 88);
+            this.txtCreateToDoId.Location = new System.Drawing.Point(675, 74);
             this.txtCreateToDoId.Name = "txtCreateToDoId";
             this.txtCreateToDoId.Size = new System.Drawing.Size(117, 20);
             this.txtCreateToDoId.TabIndex = 21;
@@ -241,11 +241,11 @@
             // 
             this.lblCreateToDoId.AutoSize = true;
             this.lblCreateToDoId.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateToDoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateToDoId.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateToDoId.ForeColor = System.Drawing.Color.White;
-            this.lblCreateToDoId.Location = new System.Drawing.Point(864, 53);
+            this.lblCreateToDoId.Location = new System.Drawing.Point(717, 39);
             this.lblCreateToDoId.Name = "lblCreateToDoId";
-            this.lblCreateToDoId.Size = new System.Drawing.Size(29, 24);
+            this.lblCreateToDoId.Size = new System.Drawing.Size(22, 17);
             this.lblCreateToDoId.TabIndex = 23;
             this.lblCreateToDoId.Text = "ID";
             // 
@@ -253,17 +253,17 @@
             // 
             this.lblCreateToDoTitle.AutoSize = true;
             this.lblCreateToDoTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreateToDoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateToDoTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateToDoTitle.ForeColor = System.Drawing.Color.White;
-            this.lblCreateToDoTitle.Location = new System.Drawing.Point(991, 53);
+            this.lblCreateToDoTitle.Location = new System.Drawing.Point(854, 39);
             this.lblCreateToDoTitle.Name = "lblCreateToDoTitle";
-            this.lblCreateToDoTitle.Size = new System.Drawing.Size(66, 24);
+            this.lblCreateToDoTitle.Size = new System.Drawing.Size(41, 17);
             this.lblCreateToDoTitle.TabIndex = 25;
             this.lblCreateToDoTitle.Text = "TITLE";
             // 
             // txtCreateToDoTitle
             // 
-            this.txtCreateToDoTitle.Location = new System.Drawing.Point(967, 88);
+            this.txtCreateToDoTitle.Location = new System.Drawing.Point(820, 74);
             this.txtCreateToDoTitle.Name = "txtCreateToDoTitle";
             this.txtCreateToDoTitle.Size = new System.Drawing.Size(117, 20);
             this.txtCreateToDoTitle.TabIndex = 24;
@@ -271,7 +271,7 @@
             // 
             // txtDeleteToDoById
             // 
-            this.txtDeleteToDoById.Location = new System.Drawing.Point(916, 242);
+            this.txtDeleteToDoById.Location = new System.Drawing.Point(770, 245);
             this.txtDeleteToDoById.Name = "txtDeleteToDoById";
             this.txtDeleteToDoById.Size = new System.Drawing.Size(77, 20);
             this.txtDeleteToDoById.TabIndex = 26;
@@ -281,17 +281,17 @@
             // 
             this.lblEditToDoTitle.AutoSize = true;
             this.lblEditToDoTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditToDoTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditToDoTitle.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditToDoTitle.ForeColor = System.Drawing.Color.White;
-            this.lblEditToDoTitle.Location = new System.Drawing.Point(991, 394);
+            this.lblEditToDoTitle.Location = new System.Drawing.Point(854, 386);
             this.lblEditToDoTitle.Name = "lblEditToDoTitle";
-            this.lblEditToDoTitle.Size = new System.Drawing.Size(66, 24);
+            this.lblEditToDoTitle.Size = new System.Drawing.Size(41, 17);
             this.lblEditToDoTitle.TabIndex = 30;
             this.lblEditToDoTitle.Text = "TITLE";
             // 
             // txtEditToDoTitle
             // 
-            this.txtEditToDoTitle.Location = new System.Drawing.Point(967, 429);
+            this.txtEditToDoTitle.Location = new System.Drawing.Point(820, 421);
             this.txtEditToDoTitle.Name = "txtEditToDoTitle";
             this.txtEditToDoTitle.Size = new System.Drawing.Size(117, 20);
             this.txtEditToDoTitle.TabIndex = 29;
@@ -301,17 +301,17 @@
             // 
             this.lblEditToDoId.AutoSize = true;
             this.lblEditToDoId.BackColor = System.Drawing.Color.Transparent;
-            this.lblEditToDoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditToDoId.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditToDoId.ForeColor = System.Drawing.Color.White;
-            this.lblEditToDoId.Location = new System.Drawing.Point(864, 394);
+            this.lblEditToDoId.Location = new System.Drawing.Point(717, 386);
             this.lblEditToDoId.Name = "lblEditToDoId";
-            this.lblEditToDoId.Size = new System.Drawing.Size(29, 24);
+            this.lblEditToDoId.Size = new System.Drawing.Size(22, 17);
             this.lblEditToDoId.TabIndex = 28;
             this.lblEditToDoId.Text = "ID";
             // 
             // txtEditToDoId
             // 
-            this.txtEditToDoId.Location = new System.Drawing.Point(822, 429);
+            this.txtEditToDoId.Location = new System.Drawing.Point(675, 421);
             this.txtEditToDoId.Name = "txtEditToDoId";
             this.txtEditToDoId.Size = new System.Drawing.Size(117, 20);
             this.txtEditToDoId.TabIndex = 27;
@@ -320,11 +320,11 @@
             // btnFindToDoTasks
             // 
             this.btnFindToDoTasks.BackColor = System.Drawing.Color.White;
-            this.btnFindToDoTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindToDoTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindToDoTasks.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnFindToDoTasks.Location = new System.Drawing.Point(892, 606);
+            this.btnFindToDoTasks.Location = new System.Drawing.Point(753, 567);
             this.btnFindToDoTasks.Name = "btnFindToDoTasks";
-            this.btnFindToDoTasks.Size = new System.Drawing.Size(130, 55);
+            this.btnFindToDoTasks.Size = new System.Drawing.Size(110, 45);
             this.btnFindToDoTasks.TabIndex = 31;
             this.btnFindToDoTasks.Text = "TASKS";
             this.btnFindToDoTasks.UseVisualStyleBackColor = false;
@@ -333,11 +333,11 @@
             // lblFindToDoTasks
             // 
             this.lblFindToDoTasks.BackColor = System.Drawing.Color.Transparent;
-            this.lblFindToDoTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFindToDoTasks.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFindToDoTasks.ForeColor = System.Drawing.Color.White;
-            this.lblFindToDoTasks.Location = new System.Drawing.Point(577, 551);
+            this.lblFindToDoTasks.Location = new System.Drawing.Point(573, 536);
             this.lblFindToDoTasks.Name = "lblFindToDoTasks";
-            this.lblFindToDoTasks.Size = new System.Drawing.Size(780, 39);
+            this.lblFindToDoTasks.Size = new System.Drawing.Size(477, 28);
             this.lblFindToDoTasks.TabIndex = 32;
             this.lblFindToDoTasks.Text = "Select a ToDo from the table and click TASKS to find if it has tasks";
             this.lblFindToDoTasks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,22 +346,22 @@
             // 
             this.lblShareSelectUser.AutoSize = true;
             this.lblShareSelectUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblShareSelectUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShareSelectUser.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShareSelectUser.ForeColor = System.Drawing.Color.White;
-            this.lblShareSelectUser.Location = new System.Drawing.Point(886, 743);
+            this.lblShareSelectUser.Location = new System.Drawing.Point(767, 738);
             this.lblShareSelectUser.Name = "lblShareSelectUser";
-            this.lblShareSelectUser.Size = new System.Drawing.Size(150, 24);
+            this.lblShareSelectUser.Size = new System.Drawing.Size(93, 17);
             this.lblShareSelectUser.TabIndex = 38;
             this.lblShareSelectUser.Text = "SELECT USER";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(575, 696);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(780, 27);
+            this.label3.Size = new System.Drawing.Size(475, 27);
             this.label3.TabIndex = 34;
             this.label3.Text = "To Share a ToDo select it from the table and click Share";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -369,11 +369,11 @@
             // btnShareToDo
             // 
             this.btnShareToDo.BackColor = System.Drawing.Color.White;
-            this.btnShareToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShareToDo.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShareToDo.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnShareToDo.Location = new System.Drawing.Point(890, 829);
+            this.btnShareToDo.Location = new System.Drawing.Point(753, 794);
             this.btnShareToDo.Name = "btnShareToDo";
-            this.btnShareToDo.Size = new System.Drawing.Size(130, 55);
+            this.btnShareToDo.Size = new System.Drawing.Size(110, 45);
             this.btnShareToDo.TabIndex = 33;
             this.btnShareToDo.Text = "SHARE";
             this.btnShareToDo.UseVisualStyleBackColor = false;
@@ -382,7 +382,7 @@
             // comboShareUser
             // 
             this.comboShareUser.FormattingEnabled = true;
-            this.comboShareUser.Location = new System.Drawing.Point(890, 783);
+            this.comboShareUser.Location = new System.Drawing.Point(743, 758);
             this.comboShareUser.Name = "comboShareUser";
             this.comboShareUser.Size = new System.Drawing.Size(130, 21);
             this.comboShareUser.TabIndex = 39;
@@ -394,7 +394,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.BackgroundImage = global::ToDoApp_Project.Properties.Resources.img6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1368, 961);
+            this.ClientSize = new System.Drawing.Size(1079, 870);
             this.Controls.Add(this.comboShareUser);
             this.Controls.Add(this.lblShareSelectUser);
             this.Controls.Add(this.label3);

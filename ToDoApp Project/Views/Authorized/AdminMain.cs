@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace ToDoApp_Project.View
 {
-    public partial class AdminView : Form
+    public partial class AdminMain : Form
     {
-        public AdminView()
+        public AdminMain()
         {
             InitializeComponent();
         }

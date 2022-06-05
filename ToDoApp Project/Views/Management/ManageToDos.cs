@@ -44,13 +44,13 @@ namespace ToDoApp_Project.View
             if (Login.currentUserRole == "Admin")
             {
                 Hide();
-                AdminView view = new AdminView();
+                AdminMain view = new AdminMain();
                 view.Show();
             }
             else
             {
                 Hide();
-                UserView view = new UserView();
+                UserMain view = new UserMain();
                 view.Show();
             }
         }
@@ -94,7 +94,7 @@ namespace ToDoApp_Project.View
             else
             {
                 int idToUpdate = int.Parse(txtEditToDoId.Text);
-                string titleToUpdate = txtEditToDoTitle.Text.Replace(" ", string.Empty);
+                string titleToUpdate = txtEditToDoTitle.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
                 bool result = todoController.UpdateToDo(idToUpdate, titleToUpdate);
 
                 if (result)
@@ -156,7 +156,7 @@ namespace ToDoApp_Project.View
             {
                 ToDo newToDo = new ToDo();
                 newToDo.Id = int.Parse(txtCreateToDoId.Text);
-                string titleFixed = txtCreateToDoTitle.Text.Replace(" ", string.Empty);
+                string titleFixed = txtCreateToDoTitle.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
                 newToDo.Title = titleFixed;
                 newToDo.CreatedAt = DateTime.Now;
                 newToDo.CreatorId = Login.currentUserId;

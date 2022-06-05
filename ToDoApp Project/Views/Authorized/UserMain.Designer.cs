@@ -1,6 +1,6 @@
 ﻿namespace ToDoApp_Project.View
 {
-    partial class UserView
+    partial class UserMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserMain));
             this.lblUserHeader = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnToDos = new System.Windows.Forms.Button();

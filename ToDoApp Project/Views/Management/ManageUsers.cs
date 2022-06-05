@@ -48,7 +48,7 @@ namespace ToDoApp_Project.View
         private void btnGoBack_Click(object sender, EventArgs e)
         {
             Hide();
-            AdminView view = new AdminView();
+            AdminMain view = new AdminMain();
             view.Show();
         }
 
@@ -108,7 +108,7 @@ namespace ToDoApp_Project.View
                     if (txtManageCreateRole.Text == "Admin")
                     {
                         User user = new User();
-                        string usernameFixed = txtManageCreateUsername.Text.Replace(" ", string.Empty);
+                        string usernameFixed = txtManageCreateUsername.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
                         user.Username = usernameFixed;
                         user.Password = txtManageCreatePassword.Text;
                         user.Role = txtManageCreateRole.Text;
@@ -152,8 +152,16 @@ namespace ToDoApp_Project.View
                 {
                     DataGridViewRow row = dgvManageUsers.CurrentRow;
                     int id = int.Parse(row.Cells[0].Value.ToString());
-                    userController.DeleteUserById(id);
-                    RefreshTable();
+                    if (id == Login.currentUserId)
+                    {
+                        MessageBox.Show("You are currently logged with this user and cannot delete it.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        userController.DeleteUserById(id);
+                        RefreshTable();
+                    }
                 }
                 else if (result2 == DialogResult.Cancel)
                 {
@@ -193,21 +201,33 @@ namespace ToDoApp_Project.View
             {
                 DialogResult result = MessageBox.Show("Do really want to delete this user?", "IMPORTANT",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
                 if (result == DialogResult.OK)
                 {
                     DialogResult result2 = MessageBox.Show("By accepting this, you understand that every ToDo and Task that this user created is going to be deleted too!", "IMPORTANT",
                         MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
                     if (result2 == DialogResult.OK)
                     {
                         int id = int.Parse(txtManageDeleteById.Text);
-                        userController.DeleteUserById(id);
-                        txtManageDeleteById.Text = "";
-                        RefreshTable();
+
+                        if (id == Login.currentUserId)
+                        {
+                            MessageBox.Show("You are currently logged with this user and cannot delete it.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            userController.DeleteUserById(id);
+                            txtManageDeleteById.Text = "";
+                            RefreshTable();
+                        }
                     }
                     else if (result2 == DialogResult.Cancel)
                     {
                         MessageBox.Show("No user was deleted.", "Response",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         txtManageDeleteById.Text = "";
                     }
                 }
@@ -215,6 +235,7 @@ namespace ToDoApp_Project.View
                 {
                     MessageBox.Show("No user was deleted.", "Response",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     txtManageDeleteById.Text = "";
                 }
             }
@@ -264,7 +285,7 @@ namespace ToDoApp_Project.View
                     if (txtManageEditRole.Text == "Admin")
                     {
                         User user = new User();
-                        string usernameFixed = txtManageEditUsername.Text.Replace(" ", string.Empty);
+                        string usernameFixed = txtManageEditUsername.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
                         user.Username = usernameFixed;
                         user.Password = txtManageEditPassword.Text;
                         user.Role = txtManageEditRole.Text;

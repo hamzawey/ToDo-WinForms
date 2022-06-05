@@ -55,12 +55,12 @@ namespace ToDoApp_Project.View
 
                 if (user.Role == "Admin")
                 {
-                    AdminView view = new AdminView();
+                    AdminMain view = new AdminMain();
                     view.Show();
                 }
                 else if (user.Role == "User")
                 {
-                    UserView view = new UserView();
+                    UserMain view = new UserMain();
                     view.Show();
                 }
                 Hide();
