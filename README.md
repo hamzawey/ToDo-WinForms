@@ -1,10 +1,9 @@
-# ToDo Application
-
-## Technologies
+# ToDo Application 🕹️
+ 
+## Technologies 💻
 - C# Windows Forms
 
-## About
-
+## About ℹ️
 The whole idea behind this application is to be used like a **project tasks manager**. Users can create a **ToDo list** 
 that can contain mini **Tasks**. Each **Todo list** can be **Shared** with other users.
 If a user is in the **Todo list** the **Todo list** creator can assign them Tasks.
@@ -15,9 +14,9 @@ If a user is in the **Todo list** the **Todo list** creator can assign them Task
 > - contains a database
 > - authorization and authentication
 
-## How to start the application
+## How to start the application 📝
 In order for the app to run you have to go to the **App.Config**
 and change the **|DataDirectory|** with the current location of **ApplicationDbModel**
-that you can get by right-clicking on the **.mdf** file.
+that you can get by right-clicking on the **.mdf** file and clicking **GET FULL PATH**.
 
-## Thanks for checking out the repository!
+## Thanks for checking out the repository! 💚
