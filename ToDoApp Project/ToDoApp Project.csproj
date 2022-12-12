@@ -109,6 +109,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\Validator.cs" />
     <Compile Include="Views\Authorized\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>

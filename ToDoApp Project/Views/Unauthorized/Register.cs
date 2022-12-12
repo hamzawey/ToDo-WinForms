@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ToDoApp_Project.Controller;
 using ToDoApp_Project.Model;
+using ToDoApp_Project.Utilities;
 
 namespace ToDoApp_Project.View
 {
@@ -23,8 +24,8 @@ namespace ToDoApp_Project.View
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtRegisterName.Text) || string.IsNullOrEmpty(txtRegisterPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtRegisterName.Text) || string.IsNullOrWhiteSpace(txtRegisterPassword.Text))
+            if (Validator.EmptyString(txtRegisterName.Text) ||
+                Validator.EmptyString(txtRegisterPassword.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -32,7 +33,7 @@ namespace ToDoApp_Project.View
                 txtRegisterName.Text = "";
                 txtRegisterPassword.Text = "";
             }
-            else if (txtRegisterName.Text.Length < 3 || txtRegisterName.Text.Length > 19)
+            else if (Validator.NameLength(txtRegisterName.Text))
             {
                 MessageBox.Show("Name must be between 3 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -40,7 +41,7 @@ namespace ToDoApp_Project.View
                 txtRegisterName.Text = "";
                 txtRegisterPassword.Text = "";
             }
-            else if (txtRegisterPassword.Text.Length < 6 || txtRegisterPassword.Text.Length > 19)
+            else if (Validator.NameLength(txtRegisterPassword.Text))
             {
                 MessageBox.Show("Password must be between 6 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -48,7 +49,7 @@ namespace ToDoApp_Project.View
                 txtRegisterName.Text = "";
                 txtRegisterPassword.Text = "";
             }
-            else if (userController.DoesUsernameExist(txtRegisterName.Text))
+            else if (userController.UsernameExist(txtRegisterName.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -63,7 +64,7 @@ namespace ToDoApp_Project.View
                 user.Password = txtRegisterPassword.Text;
                 user.Role = "User";
 
-                userController.RegisterUser(user);
+                userController.Register(user);
 
                 Hide();
                 Login login = new Login();

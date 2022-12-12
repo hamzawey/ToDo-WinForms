@@ -29,10 +29,5 @@ namespace ToDoApp_Project
             Login view = new Login();
             view.Show();
         }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

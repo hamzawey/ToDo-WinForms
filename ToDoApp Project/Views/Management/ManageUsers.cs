@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ToDoApp_Project.Controller;
 using ToDoApp_Project.Model;
+using ToDoApp_Project.Utilities;
 
 namespace ToDoApp_Project.View
 {
@@ -21,7 +22,7 @@ namespace ToDoApp_Project.View
 
         private void RefreshTable()
         {
-            dgvManageUsers.DataSource = userController.GetAllUsers();
+            dgvManageUsers.DataSource = userController.GetAll();
         }
 
         private void EmptyBoxMessage()
@@ -56,8 +57,10 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtManageCreateId.Text, out int isNumberResult);
 
-            if (string.IsNullOrEmpty(txtManageCreateUsername.Text) || string.IsNullOrEmpty(txtManageCreatePassword.Text)
-                || string.IsNullOrEmpty(txtManageCreateRole.Text) || string.IsNullOrEmpty(txtManageCreateId.Text))
+            if (Validator.NameLength(txtManageCreateUsername.Text) ||
+                Validator.NameLength(txtManageCreatePassword.Text) ||
+                Validator.NameLength(txtManageCreateRole.Text) ||
+                Validator.NameLength(txtManageCreateId.Text))
             {
                 EmptyBoxMessage();
                 ClearCreateBoxes();
@@ -68,27 +71,27 @@ namespace ToDoApp_Project.View
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ClearCreateBoxes();
             }
-            else if (txtManageCreateUsername.Text.Length < 3 || txtManageCreateUsername.Text.Length > 19)
+            else if (!Validator.NameLength(txtManageCreateUsername.Text))
             {
                 MessageBox.Show("Name must be between 3 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateBoxes();
             }
-            else if (txtManageCreatePassword.Text.Length < 6 || txtManageCreatePassword.Text.Length > 19)
+            else if (!Validator.NameLength(txtManageCreatePassword.Text))
             {
                 MessageBox.Show("Password must be between 6 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateBoxes();
             }
-            else if (userController.DoesUsernameExist(txtManageCreateUsername.Text))
+            else if (userController.UsernameExist(txtManageCreateUsername.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ClearCreateBoxes();
             }
-            else if (userController.DoesUserIdExist(int.Parse(txtManageCreateId.Text)))
+            else if (userController.UserIdExist(int.Parse(txtManageCreateId.Text)))
             {
                 MessageBox.Show("Id is being used!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -180,7 +183,7 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtManageDeleteById.Text, out int isNumberResult);
 
-            if (string.IsNullOrEmpty(txtManageDeleteById.Text) || string.IsNullOrWhiteSpace(txtManageDeleteById.Text))
+            if (Validator.EmptyString(txtManageDeleteById.Text))
             {
                 EmptyBoxMessage();
                 txtManageDeleteById.Text = "";
@@ -191,7 +194,7 @@ namespace ToDoApp_Project.View
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtManageDeleteById.Text = "";
             }
-            else if (!userController.DoesUserIdExist(int.Parse(txtManageDeleteById.Text)))
+            else if (!userController.UserIdExist(int.Parse(txtManageDeleteById.Text)))
             {
                 MessageBox.Show($"User with Id: ${txtManageDeleteById.Text} doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -246,27 +249,28 @@ namespace ToDoApp_Project.View
             DataGridViewRow row = dgvManageUsers.CurrentRow;
             int id = int.Parse(row.Cells[0].Value.ToString());
 
-            if (string.IsNullOrEmpty(txtManageEditUsername.Text) || string.IsNullOrEmpty(txtManageEditPassword.Text)
-                || string.IsNullOrEmpty(txtManageEditRole.Text))
+            if (Validator.EmptyString(txtManageEditUsername.Text) ||
+                Validator.EmptyString(txtManageEditPassword.Text) ||
+                Validator.EmptyString(txtManageEditRole.Text))
             {
                 EmptyBoxMessage();
                 ClearEditBoxes();
             }
-            else if (txtManageEditUsername.Text.Length < 3 || txtManageEditUsername.Text.Length > 19)
+            else if (!Validator.NameLength(txtManageEditUsername.Text))
             {
                 MessageBox.Show("Name must be between 3 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearEditBoxes();
             }
-            else if (txtManageEditPassword.Text.Length < 6 || txtManageEditPassword.Text.Length > 19)
+            else if (!Validator.NameLength(txtManageEditPassword.Text))
             {
                 MessageBox.Show("Password must be between 6 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearEditBoxes();
             }
-            else if (userController.DoesUsernameExist(txtManageEditUsername.Text))
+            else if (userController.UsernameExist(txtManageEditUsername.Text))
             {
                 MessageBox.Show("Username already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -290,7 +294,7 @@ namespace ToDoApp_Project.View
                         user.Password = txtManageEditPassword.Text;
                         user.Role = txtManageEditRole.Text;
 
-                        userController.EditUser(id, user);
+                        userController.Edit(id, user);
                         ClearEditBoxes();
                         RefreshTable();
                     }
@@ -301,7 +305,7 @@ namespace ToDoApp_Project.View
                         user.Password = txtManageEditPassword.Text;
                         user.Role = txtManageEditRole.Text;
 
-                        userController.EditUser(id, user);
+                        userController.Edit(id, user);
                         ClearEditBoxes();
                         RefreshTable();
                     }

@@ -8,10 +8,15 @@ namespace ToDoApp_Project.Controller
 {
     public class ToDoController
     {
-        private readonly AppDbModelEntities _dbContext = new AppDbModelEntities();
+        private readonly AppDbModelEntities _dbContext;
+
+        public ToDoController()
+        {
+            _dbContext = new AppDbModelEntities();
+        }
 
         // TODO ONLY METHODS
-        public List<ToDo> GetOwnedToDos(int currentUserId)
+        public List<ToDo> GetOwnToDos(int currentUserId)
         {
             List<ToDo> ownedToDos = new List<ToDo>();
 
@@ -36,7 +41,7 @@ namespace ToDoApp_Project.Controller
             return ownedToDos;
         }
 
-        public bool DoesToDoIdExist(int checkId)
+        public bool ToDoIdExist(int checkId)
         {
             foreach (var todo in _dbContext.ToDoes.ToList())
             {
@@ -49,7 +54,7 @@ namespace ToDoApp_Project.Controller
             return false;
         }
 
-        public bool DoesToDoTitleExist(string checkTitle)
+        public bool ToDoTitleExist(string checkTitle)
         {
             foreach (var todo in _dbContext.ToDoes.ToList())
             {
@@ -62,13 +67,13 @@ namespace ToDoApp_Project.Controller
             return false;
         }
 
-        public void CreateToDo(ToDo newToDo)
+        public void Create(ToDo newToDo)
         {
             _dbContext.ToDoes.Add(newToDo);
             _dbContext.SaveChanges();
         }
 
-        public void DeleteToDoById(int idToDelete)
+        public void DeleteById(int idToDelete)
         {
             var todoToDelete = _dbContext.ToDoes.Where(todo => todo.Id == idToDelete).FirstOrDefault();
 
@@ -84,7 +89,7 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        public bool UpdateToDo(int idToUpdate, string titleToUpdate)
+        public bool Update(int idToUpdate, string titleToUpdate)
         {
             var todoToUpdate = _dbContext.ToDoes.Where(todo => todo.Id == idToUpdate).FirstOrDefault();
 
@@ -104,7 +109,7 @@ namespace ToDoApp_Project.Controller
         }
 
         // TASKS ONLY METHODS
-        public List<Task> GetOwnedTasks(int currentToDoId)
+        public List<Task> GetOwnTasks(int currentToDoId)
         {
             return _dbContext.Tasks.Where(task => task.ToDoId == currentToDoId).ToList();
         }
@@ -120,7 +125,7 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        public void ToggleTaskIsCompleted(int taskId)
+        public void ChangeTaskStatus(int taskId)
         {
             var taskFound = _dbContext.Tasks.Where(task => task.Id == taskId).FirstOrDefault();
             taskFound.IsComplete = !taskFound.IsComplete;
@@ -128,7 +133,7 @@ namespace ToDoApp_Project.Controller
             _dbContext.SaveChanges();
         }
 
-        public bool DoesTaskTitleExist(string checkTaskTitle)
+        public bool TaskTitleExist(string checkTaskTitle)
         {
             foreach (var task in _dbContext.Tasks.ToList())
             {
@@ -141,7 +146,7 @@ namespace ToDoApp_Project.Controller
             return false;
         }
 
-        public bool DoesTaskIdExist(int checkTaskId)
+        public bool TaskIdExist(int checkTaskId)
         {
             foreach (var task in _dbContext.Tasks.ToList())
             {

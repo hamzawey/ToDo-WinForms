@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ToDoApp_Project.Controller;
 using ToDoApp_Project.Model;
+using ToDoApp_Project.Utilities;
 
 namespace ToDoApp_Project.View
 {
@@ -24,7 +25,7 @@ namespace ToDoApp_Project.View
 
         private void RefreshTable()
         {
-            dgvManageToDos.DataSource = todoController.GetOwnedToDos(Login.currentUserId);
+            dgvManageToDos.DataSource = todoController.GetOwnToDos(Login.currentUserId);
         }
 
         private void ClearCreateBoxes()
@@ -59,7 +60,8 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtEditToDoId.Text, out int isNumberResult);
 
-            if (string.IsNullOrEmpty(txtEditToDoId.Text) || string.IsNullOrEmpty(txtEditToDoTitle.Text))
+            if (Validator.EmptyString(txtEditToDoId.Text) ||
+                Validator.EmptyString(txtEditToDoTitle.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -72,20 +74,20 @@ namespace ToDoApp_Project.View
 
                 ClearEditBoxes();
             }
-            else if (txtEditToDoTitle.Text.Length < 5 || txtEditToDoTitle.Text.Length > 15)
+            else if (!Validator.NameLength(txtEditToDoTitle.Text))
             {
                 MessageBox.Show("Title must be between 5 - 15 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearEditBoxes();
             }
-            else if (!todoController.DoesToDoIdExist(int.Parse(txtEditToDoId.Text)))
+            else if (!todoController.ToDoIdExist(int.Parse(txtEditToDoId.Text)))
             {
                 MessageBox.Show($"ToDo with Id: {txtEditToDoId.Text} doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ClearEditBoxes();
             }
-            else if (todoController.DoesToDoTitleExist(txtEditToDoTitle.Text))
+            else if (todoController.ToDoTitleExist(txtEditToDoTitle.Text))
             {
                 MessageBox.Show($"ToDo with Title: {txtEditToDoTitle.Text} already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -95,7 +97,7 @@ namespace ToDoApp_Project.View
             {
                 int idToUpdate = int.Parse(txtEditToDoId.Text);
                 string titleToUpdate = txtEditToDoTitle.Text.TrimStart(' ', '@', '#', '$', '%', '^', '&', '*', '(', ')', '/', '<', '>', '`', ';', '-', '+', '=');
-                bool result = todoController.UpdateToDo(idToUpdate, titleToUpdate);
+                bool result = todoController.Update(idToUpdate, titleToUpdate);
 
                 if (result)
                 {
@@ -117,7 +119,8 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtCreateToDoId.Text, out int isNumberResult);
 
-            if (string.IsNullOrEmpty(txtCreateToDoId.Text) || string.IsNullOrEmpty(txtCreateToDoTitle.Text))
+            if (Validator.EmptyString(txtCreateToDoId.Text) ||
+                Validator.EmptyString(txtCreateToDoTitle.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -131,21 +134,21 @@ namespace ToDoApp_Project.View
 
                 ClearCreateBoxes();
             }
-            else if (txtCreateToDoTitle.Text.Length < 5 || txtCreateToDoTitle.Text.Length > 15)
+            else if (!Validator.NameLength(txtCreateToDoTitle.Text))
             {
                 MessageBox.Show("Title must be between 5 - 15 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateBoxes();
             }
-            else if (todoController.DoesToDoIdExist(int.Parse(txtCreateToDoId.Text)))
+            else if (todoController.ToDoIdExist(int.Parse(txtCreateToDoId.Text)))
             {
                 MessageBox.Show("Id is being used!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 ClearCreateBoxes();
             }
-            else if (todoController.DoesToDoTitleExist(txtCreateToDoTitle.Text))
+            else if (todoController.ToDoTitleExist(txtCreateToDoTitle.Text))
             {
                 MessageBox.Show("Title already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -163,7 +166,7 @@ namespace ToDoApp_Project.View
                 newToDo.LastChanged = DateTime.Now;
                 newToDo.LastChangedUserId = Login.currentUserId;
 
-                todoController.CreateToDo(newToDo);
+                todoController.Create(newToDo);
 
                 RefreshTable();
                 ClearCreateBoxes();
@@ -174,7 +177,7 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtDeleteToDoById.Text, out int isNumberResult);
 
-            if (string.IsNullOrEmpty(txtDeleteToDoById.Text))
+            if (Validator.EmptyString(txtDeleteToDoById.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -199,7 +202,7 @@ namespace ToDoApp_Project.View
                 txtDeleteToDoById.Text = "";
                 RefreshTable();
             }
-            else if (!todoController.DoesToDoIdExist(int.Parse(txtDeleteToDoById.Text)))
+            else if (!todoController.ToDoIdExist(int.Parse(txtDeleteToDoById.Text)))
             {
                 MessageBox.Show("Id doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -210,9 +213,10 @@ namespace ToDoApp_Project.View
             {
                 DialogResult result = MessageBox.Show($"Do really want to delete this ToDo with Id: {txtDeleteToDoById.Text}?", "IMPORTANT",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
                 if (result == DialogResult.OK)
                 {
-                    todoController.DeleteToDoById(int.Parse(txtDeleteToDoById.Text));
+                    todoController.DeleteById(int.Parse(txtDeleteToDoById.Text));
                     txtDeleteToDoById.Text = "";
                     RefreshTable();
                 }

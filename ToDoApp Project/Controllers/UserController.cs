@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using ToDoApp_Project.Model;
 
@@ -7,14 +6,19 @@ namespace ToDoApp_Project.Controller
 {
     public class UserController
     {
-        private readonly AppDbModelEntities _dbContext = new AppDbModelEntities();
+        private readonly AppDbModelEntities _dbContext;
 
-        public List<User> GetAllUsers()
+        public UserController()
+        {
+            _dbContext = new AppDbModelEntities();
+        }
+
+        public List<User> GetAll()
         {
             return _dbContext.Users.ToList();
         }
 
-        public void RegisterUser(User userToRegister)
+        public void Register(User userToRegister)
         {
             userToRegister.Id = _dbContext.Users.ToList().LastOrDefault().Id + 1;
 
@@ -41,7 +45,7 @@ namespace ToDoApp_Project.Controller
 
         public bool TryToLogin(User loginUser)
         {
-            foreach (var user in GetAllUsers())
+            foreach (var user in GetAll())
             {
                 if (user.Username == loginUser.Username)
                 {
@@ -55,9 +59,9 @@ namespace ToDoApp_Project.Controller
             return false;
         }
 
-        public bool DoesUsernameExist(string username)
+        public bool UsernameExist(string username)
         {
-            foreach (var user in GetAllUsers())
+            foreach (var user in GetAll())
             {
                 if (user.Username == username)
                 {
@@ -68,9 +72,9 @@ namespace ToDoApp_Project.Controller
             return false;
         }
 
-        public int FindUserId(User userToFindId)
+        public int FindUserById(User userToFindId)
         {
-            foreach (var user in GetAllUsers())
+            foreach (var user in GetAll())
             {
                 if (user.Username == userToFindId.Username)
                 {
@@ -132,9 +136,9 @@ namespace ToDoApp_Project.Controller
             }
         }
 
-        public string FindUserRole(User userToFindRole)
+        public string FindRole(User userToFindRole)
         {
-            foreach (var user in GetAllUsers())
+            foreach (var user in GetAll())
             {
                 if (user.Username == userToFindRole.Username)
                 {
@@ -145,9 +149,9 @@ namespace ToDoApp_Project.Controller
             return "";
         }
 
-        public bool DoesUserIdExist(int idExists)
+        public bool UserIdExist(int idExists)
         {
-            foreach (var user in GetAllUsers())
+            foreach (var user in GetAll())
             {
                 if (user.Id == idExists)
                 {
@@ -158,7 +162,7 @@ namespace ToDoApp_Project.Controller
             return false;
         }
 
-        public void EditUser(int id, User userToEdit)
+        public void Edit(int id, User userToEdit)
         {
             var userUpdated = _dbContext.Users.Where(u => u.Id == id).FirstOrDefault();
 

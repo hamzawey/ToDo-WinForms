@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ToDoApp_Project.Controller;
 using ToDoApp_Project.Model;
+using ToDoApp_Project.Utilities;
 
 namespace ToDoApp_Project.View
 {
@@ -29,8 +30,8 @@ namespace ToDoApp_Project.View
             user.Username = txtLoginName.Text;
             user.Password = txtLoginPassword.Text;
 
-            if (string.IsNullOrEmpty(txtLoginName.Text) || string.IsNullOrEmpty(txtLoginPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtLoginName.Text) || string.IsNullOrWhiteSpace(txtLoginPassword.Text))
+            if (!Validator.EmptyString(txtLoginName.Text) ||
+                !Validator.EmptyString(txtLoginPassword.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -46,8 +47,8 @@ namespace ToDoApp_Project.View
             }
             else
             {
-                user.Role = userController.FindUserRole(user);
-                user.Id = userController.FindUserId(user);
+                user.Role = userController.FindRole(user);
+                user.Id = userController.FindUserById(user);
 
                 currentUserId = user.Id;
                 currentUserName = user.Username;

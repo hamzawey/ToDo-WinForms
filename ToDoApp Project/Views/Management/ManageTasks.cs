@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ToDoApp_Project.Controller;
+using ToDoApp_Project.Utilities;
 
 namespace ToDoApp_Project.View
 {
@@ -21,7 +22,7 @@ namespace ToDoApp_Project.View
 
         private void RefreshTable()
         {
-            dgvTasks.DataSource = todoController.GetOwnedTasks(ManageToDos.currentToDoId);
+            dgvTasks.DataSource = todoController.GetOwnTasks(ManageToDos.currentToDoId);
         }
 
         private void ClearCreateTextBoxes()
@@ -59,7 +60,7 @@ namespace ToDoApp_Project.View
         private void btnToggleComplete_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = dgvTasks.CurrentRow;
-            todoController.ToggleTaskIsCompleted(int.Parse(row.Cells[0].Value.ToString()));
+            todoController.ChangeTaskStatus(int.Parse(row.Cells[0].Value.ToString()));
             RefreshTable();
         }
 
@@ -67,8 +68,10 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtEditTaskId.Text, out int result);
 
-            if (string.IsNullOrEmpty(txtEditTaskId.Text) || string.IsNullOrEmpty(txtEditTaskTitle.Text)
-                || string.IsNullOrEmpty(txtEditTaskDescription.Text) || string.IsNullOrEmpty(txtEditTaskIsComplete.Text))
+            if (Validator.EmptyString(txtEditTaskId.Text) ||
+                Validator.EmptyString(txtEditTaskTitle.Text) ||
+                Validator.EmptyString(txtEditTaskDescription.Text) ||
+                Validator.EmptyString(txtEditTaskIsComplete.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -82,28 +85,28 @@ namespace ToDoApp_Project.View
 
                 ClearEditTextBoxes();
             }
-            else if (txtEditTaskTitle.Text.Length < 5 || txtEditTaskTitle.Text.Length > 19)
+            else if (!Validator.NameLength(txtEditTaskTitle.Text))
             {
                 MessageBox.Show("Title must be between 5 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearEditTextBoxes();
             }
-            else if (txtEditTaskDescription.Text.Length < 5 || txtEditTaskDescription.Text.Length > 49)
+            else if (!Validator.NameLength(txtEditTaskDescription.Text))
             {
                 MessageBox.Show("Description must be between 5 - 49 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearEditTextBoxes();
             }
-            else if (!todoController.DoesTaskIdExist(int.Parse(txtEditTaskId.Text)))
+            else if (!todoController.TaskIdExist(int.Parse(txtEditTaskId.Text)))
             {
                 MessageBox.Show($"Task with Id: {txtEditTaskId.Text} doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearEditTextBoxes();
             }
-            else if (todoController.DoesTaskTitleExist(txtEditTaskTitle.Text))
+            else if (todoController.TaskTitleExist(txtEditTaskTitle.Text))
             {
                 MessageBox.Show($"The Title: {txtCreateTaskTitle.Text} already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -150,7 +153,7 @@ namespace ToDoApp_Project.View
         {
             int.TryParse(txtTaskDeleteById.Text, out int result);
 
-            if (string.IsNullOrEmpty(txtTaskDeleteById.Text))
+            if (Validator.EmptyString(txtTaskDeleteById.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -182,8 +185,11 @@ namespace ToDoApp_Project.View
         private void btnCreateTask_Click(object sender, EventArgs e)
         {
             int.TryParse(txtCreateTaskId.Text, out int result);
-            if (string.IsNullOrEmpty(txtCreateTaskId.Text) || string.IsNullOrEmpty(txtCreateTaskTitle.Text)
-                || string.IsNullOrEmpty(txtCreateTaskDescription.Text) || string.IsNullOrEmpty(txtCreateTaskToDoId.Text))
+
+            if (Validator.EmptyString(txtCreateTaskId.Text) ||
+                Validator.EmptyString(txtCreateTaskTitle.Text) ||
+                Validator.EmptyString(txtCreateTaskDescription.Text) ||
+                Validator.EmptyString(txtCreateTaskToDoId.Text))
             {
                 MessageBox.Show("Please dont leave the text boxes empty!", "EMPTY BOX DETECTED",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -197,35 +203,35 @@ namespace ToDoApp_Project.View
 
                 ClearCreateTextBoxes();
             }
-            else if (txtCreateTaskTitle.Text.Length < 5 || txtCreateTaskTitle.Text.Length > 19)
+            else if (!Validator.NameLength(txtCreateTaskTitle.Text))
             {
                 MessageBox.Show("Title must be between 5 - 19 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateTextBoxes();
             }
-            else if (txtCreateTaskDescription.Text.Length < 6 || txtCreateTaskDescription.Text.Length > 49)
+            else if (!Validator.NameLength(txtCreateTaskDescription.Text))
             {
                 MessageBox.Show("Description must be between 6 - 49 characters!", "PROVIDED DATA ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateTextBoxes();
             }
-            else if (!todoController.DoesToDoIdExist(int.Parse(txtCreateTaskToDoId.Text)))
+            else if (!todoController.ToDoIdExist(int.Parse(txtCreateTaskToDoId.Text)))
             {
                 MessageBox.Show($"ToDo with Id: {txtCreateTaskToDoId.Text} doesn't exist!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateTextBoxes();
             }
-            else if (todoController.DoesTaskIdExist(int.Parse(txtCreateTaskId.Text)))
+            else if (todoController.TaskIdExist(int.Parse(txtCreateTaskId.Text)))
             {
                 MessageBox.Show($"Task Id {txtCreateTaskId.Text} is being used!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ClearCreateTextBoxes();
             }
-            else if (todoController.DoesTaskTitleExist(txtCreateTaskTitle.Text))
+            else if (todoController.TaskTitleExist(txtCreateTaskTitle.Text))
             {
                 MessageBox.Show($"The Title: {txtCreateTaskTitle.Text} already exists!", "PROVIDED DATA ERROR",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
